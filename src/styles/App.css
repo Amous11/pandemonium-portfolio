@@ -1,3 +1,8 @@
+#root {
+  background-color: #000000;
+  color: white
+}
+
 .video-background {
   position: relative;
   overflow: hidden;
@@ -15,4 +20,10 @@
 .video-background .container {
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 576px) {
+  .small-screen-text {
+    font-size: 1.1rem !important;
+  }
 }
