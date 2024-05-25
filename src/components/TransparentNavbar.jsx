@@ -7,7 +7,7 @@ export function TransparentNavbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 200;
+      const show = window.scrollY > window.innerHeight * 0.9;
       if (show !== isScrolled) setIsScrolled(show);
     };
 

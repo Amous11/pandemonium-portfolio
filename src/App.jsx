@@ -15,6 +15,7 @@ import { Video } from "./components/Video.jsx";
 import { VideoGrid } from "./components/VideoGrid.jsx";
 import { MidSection } from "./components/MidSection.jsx";
 import { Footer } from "./components/Footer.jsx";
+import { PageUp } from "./components/PageUp.jsx";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
         ]}
       />
 
+      <PageUp />
       <Footer />
     </>
   );
