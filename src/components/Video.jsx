@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import LazyLoad from "react-lazy-load";
 import logo from "../assets/logo.png";
 
-export function Video({ src, overlay, autoPlay, insideGrid, noLogo = true }) {
+export function Video({ src, overlay, autoPlay, insideGrid, hasLogo }) {
   const videoRef = useRef();
 
   const handleMouseEnter = () => {
@@ -34,7 +34,7 @@ export function Video({ src, overlay, autoPlay, insideGrid, noLogo = true }) {
       {overlay && (
         <Container className="d-flex align-items-stretch h-100 p-0 m-0">
           <div className="d-flex flex-column justify-content-between w-100 p-3">
-            {noLogo ? <div></div> : <img src={logo} width="45" height="45" />}
+            {hasLogo ? <img src={logo} width="45" height="45" /> : <div></div>}
             <p className="m-0">{overlay}</p>
           </div>
         </Container>
@@ -49,5 +49,5 @@ Video.propTypes = {
   src: PropTypes.string,
   autoPlay: PropTypes.bool,
   insideGrid: PropTypes.bool,
-  noLogo: PropTypes.bool,
+  hasLogo: PropTypes.bool,
 };
