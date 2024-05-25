@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useRef } from "react";
 import { Container } from "react-bootstrap";
+import LazyLoad from "react-lazy-load";
 import logo from "../assets/logo.png";
 
 export function Video({ src, overlay, autoPlay, insideGrid, noLogo = true }) {
@@ -25,9 +26,11 @@ export function Video({ src, overlay, autoPlay, insideGrid, noLogo = true }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <video ref={videoRef} autoPlay={autoPlay} loop muted>
-        <source src={src} type="video/mp4" />
-      </video>
+      <LazyLoad>
+        <video ref={videoRef} autoPlay={autoPlay} loop muted>
+          <source src={src} type="video/mp4" />
+        </video>
+      </LazyLoad>
       {overlay && (
         <Container className="d-flex align-items-stretch h-100 p-0 m-0">
           <div className="d-flex flex-column justify-content-between w-100 p-3">
