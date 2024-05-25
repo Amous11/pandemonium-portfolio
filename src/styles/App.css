@@ -28,11 +28,18 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
+.image-background img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* 
 .video-background .container {
   position: relative;
   z-index: 1;
-}
+} */
 
 a{
   color: gray;

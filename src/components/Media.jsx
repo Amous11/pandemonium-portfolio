@@ -4,7 +4,8 @@ import { Container } from "react-bootstrap";
 import LazyLoad from "react-lazy-load";
 import logo from "../assets/logo.png";
 
-export function Video({ src, overlay, autoPlay, insideGrid, hasLogo }) {
+export function Media({ src, overlay, autoPlay, insideGrid, hasLogo }) {
+  const isVideo = src.endsWith("mp4");
   const videoRef = useRef();
 
   const handleMouseEnter = () => {
@@ -21,32 +22,38 @@ export function Video({ src, overlay, autoPlay, insideGrid, hasLogo }) {
 
   return (
     <div
-      className={`video-background d-flex align-items-stretch`}
+      className={`${
+        isVideo ? "video-background" : "image-background"
+      } d-flex align-items-stretch`}
       style={{ width: "100%", height: insideGrid ? "100%" : "100vh" }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={isVideo && handleMouseEnter}
+      onMouseLeave={isVideo && handleMouseLeave}
     >
       <LazyLoad>
-        <video ref={videoRef} autoPlay={autoPlay} loop muted>
-          <source src={src} type="video/mp4" />
-        </video>
+        {isVideo ? (
+          <video ref={videoRef} autoPlay={autoPlay} loop muted>
+            <source src={src} type="video/mp4" />
+          </video>
+        ) : (
+          <img src={src} />
+        )}
       </LazyLoad>
-      {overlay && (
+
+      {/* {overlay && (
         <Container className="d-flex align-items-stretch h-100 p-0 m-0">
           <div className="d-flex flex-column justify-content-between w-100 p-3">
             {hasLogo ? <img src={logo} width="45" height="45" /> : <div></div>}
             <p className="m-0">{overlay}</p>
           </div>
         </Container>
-      )}
+      )} */}
     </div>
   );
 }
 
-Video.propTypes = {
-  videoStyle: PropTypes.string,
-  overlay: PropTypes.string,
+Media.propTypes = {
   src: PropTypes.string,
+  overlay: PropTypes.string,
   autoPlay: PropTypes.bool,
   insideGrid: PropTypes.bool,
   hasLogo: PropTypes.bool,
