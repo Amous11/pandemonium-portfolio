@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import logo from "../assets/logo.png";
 
 export function TransparentNavbar() {
@@ -24,7 +24,7 @@ export function TransparentNavbar() {
 
   return (
     <>
-      <Navbar style={navbarStyle} fixed="top" expand="lg">
+      <Navbar style={navbarStyle} fixed="top" expand="sm">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -38,6 +38,28 @@ export function TransparentNavbar() {
               Pandemonium
             </span>
           </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className="justify-content-end"
+          >
+            <Nav>
+              <Nav.Link
+                className="text-light"
+                onClick={() => {
+                  window.scrollTo(0, window.innerHeight * 0.9);
+                }}
+              >
+                Info
+              </Nav.Link>
+              <NavDropdown
+                title={<span className="text-light">Portfolio</span>}
+              >
+                <NavDropdown.Item>Installations</NavDropdown.Item>
+                <NavDropdown.Item>CGI</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>

@@ -1,6 +1,18 @@
-#root {
+body {
   background-color: #000000;
-  color: white
+  color: white;
+  animation: slide-up 2s ease-out;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .video-background {
@@ -20,12 +32,6 @@
 .video-background .container {
   position: relative;
   z-index: 1;
-}
-
-@media (max-width: 576px) {
-  .small-screen-text {
-    font-size: 1.1rem;
-  }
 }
 
 a{
