@@ -5,6 +5,7 @@ import img3 from "../assets/P7 Vape/vape_2k_00118.jpg";
 import img4 from "../assets/P7 Vape/vape_2k_00151.jpg";
 import img5 from "../assets/P7 Vape/vape_2k_00283.jpg";
 import { TransparentNavbar } from "../components/TransparentNavbar";
+import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
 import { MidSection } from "../components/MidSection";
 import { PageUp } from "../components/PageUp";
@@ -14,19 +15,7 @@ export default function Vape() {
   return (
     <>
       <TransparentNavbar />
-      <div style={{ height: "100vh", width: "100%" }}></div>
-      <div className="fixed-video">
-        <video
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-          src={video}
-          controls
-          autoPlay
-          className="video-player"
-        ></video>
-      </div>
+      <ProductHeader video={video} />
       <div className="m-0 p-0" style={{ backgroundColor: "black" }}>
         <br />
         <MidSection />
