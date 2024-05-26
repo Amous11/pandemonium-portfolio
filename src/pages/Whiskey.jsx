@@ -1,9 +1,9 @@
-import video from "../assets/P6 Whieskey/New Final.mp4";
-import img1 from "../assets/P6 Whieskey/0094.jpg";
-import img2 from "../assets/P6 Whieskey/0329.jpg";
-import img3 from "../assets/P6 Whieskey/0417.jpg";
-import img4 from "../assets/P6 Whieskey/0469.jpg";
-import img5 from "../assets/P6 Whieskey/test.jpg";
+import video from "../assets/P6 Whiskey/New Final.mp4";
+import img1 from "../assets/P6 Whiskey/0094.jpg";
+import img2 from "../assets/P6 Whiskey/0329.jpg";
+import img3 from "../assets/P6 Whiskey/0417.jpg";
+import img4 from "../assets/P6 Whiskey/0469.jpg";
+import img5 from "../assets/P6 Whiskey/test.jpg";
 import { TransparentNavbar } from "../components/TransparentNavbar";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";

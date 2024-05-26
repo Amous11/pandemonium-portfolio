@@ -1,9 +1,9 @@
-import video from "../assets/P3 Kamana/wearekamaana_full_AGX.mp4";
-import img1 from "../assets/P3 Kamana/wearekamaana_full_AGX_00000.jpg";
-import img2 from "../assets/P3 Kamana/wearekamaana_full_AGX_00201.jpg";
-import img3 from "../assets/P3 Kamana/wearekamaana_full_AGX_00414.jpg";
-import img4 from "../assets/P3 Kamana/wearekamaana_full_AGX_00482.jpg";
-import img5 from "../assets/P3 Kamana/wearekamaana_full_AGX_00631.jpg";
+import video from "../assets/P3 Kamaana/wearekamaana_full_AGX.mp4";
+import img1 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00000.jpg";
+import img2 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00201.jpg";
+import img3 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00414.jpg";
+import img4 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00482.jpg";
+import img5 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00631.jpg";
 import { TransparentNavbar } from "../components/TransparentNavbar";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
