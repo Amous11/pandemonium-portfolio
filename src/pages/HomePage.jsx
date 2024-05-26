@@ -4,7 +4,7 @@ import treatmentMP4 from "../assets/P1 ISC/3 Treatment.mp4";
 import activePeelMP4 from "../assets/P1 ISC/Active Peel System blue.mp4";
 import activeSerumMP4 from "../assets/P1 ISC/Shot_15_ActiveSerum_.mp4";
 import proHealMP4 from "../assets/P1 ISC/Shot04_v9_pro_heal.mp4";
-import sonyMP4 from "../assets/P2 Sony/sony with sound.mp4";
+import sonyMP4 from "../assets/P2 Sony/sony_with_sound.mp4";
 import kamaanaMP4 from "../assets/P3 Kamana/wearekamaana_full_AGX.mp4";
 import smartWatchM4 from "../assets/P5 Watch/2k_smartwatch.mp4";
 import aodhMP4 from "../assets/P6 Whieskey/New Final.mp4";
