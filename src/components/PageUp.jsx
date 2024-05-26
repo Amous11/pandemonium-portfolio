@@ -20,7 +20,7 @@ export function PageUp() {
   return (
     <>
       <Button
-        className="p-0 me-1"
+        className="p-0 me-4"
         variant="link"
         onClick={() => window.scrollTo(0, 0)}
         style={{
