@@ -36,7 +36,7 @@ export default function HomePage() {
             path: "/project/ISC",
             thumbnail: isc1JPG,
           },
-          { src: neuraMP4, path: "/project/ISC", thumbnail: neuraJPG },
+          { src: neuraMP4, path: "/project/Neura", thumbnail: neuraJPG },
           { src: vapeMP4, path: "/project/Vape", thumbnail: vapeJPG },
         ]}
       />
