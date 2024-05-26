@@ -1,5 +1,5 @@
 /* ASSET LINKS */
-import mainVideo from "../assets/P4 Neura/iBotONE_teaser_008_final.mp4";
+import mainVideo from "../assets/demoreelv1.mov";
 import treatmentMP4 from "../assets/P1 ISC/3 Treatment.mp4";
 import activePeelMP4 from "../assets/P1 ISC/Active Peel System blue.mp4";
 import activeSerumMP4 from "../assets/P1 ISC/Shot_15_ActiveSerum_.mp4";
