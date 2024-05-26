@@ -24,8 +24,8 @@ export function Media({ src, overlay, autoPlay, insideGrid, hasLogo }) {
     <div
       className="media-background d-flex align-items-stretch"
       style={{ width: "100%", height: insideGrid ? "100%" : "100vh" }}
-      onMouseEnter={isVideo && handleMouseEnter}
-      onMouseLeave={isVideo && handleMouseLeave}
+      onMouseEnter={isVideo ? handleMouseEnter : undefined}
+      onMouseLeave={isVideo ? handleMouseLeave : undefined}
     >
       <LazyLoad>
         {isVideo ? (
