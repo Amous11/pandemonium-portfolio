@@ -14,13 +14,22 @@ body {
     opacity: 1;
   }
 }
+.fixed-video{
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom:0;
+  z-index: -1;
+}
 
-.video-background {
+.media-background {
   position: relative;
   overflow: hidden;
 }
 
-.video-background video {
+.media-background video, 
+.media-background img{
   position: absolute;
   top: 0;
   left: 0;
@@ -28,18 +37,12 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.image-background img {
+
+.overlay{
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
-/* 
-.video-background .container {
-  position: relative;
-  z-index: 1;
-} */
 
 a{
   color: gray;

@@ -22,31 +22,34 @@ export function Media({ src, overlay, autoPlay, insideGrid, hasLogo }) {
 
   return (
     <div
-      className={`${
-        isVideo ? "video-background" : "image-background"
-      } d-flex align-items-stretch`}
+      className="media-background d-flex align-items-stretch"
       style={{ width: "100%", height: insideGrid ? "100%" : "100vh" }}
       onMouseEnter={isVideo && handleMouseEnter}
       onMouseLeave={isVideo && handleMouseLeave}
     >
       <LazyLoad>
         {isVideo ? (
-          <video ref={videoRef} autoPlay={autoPlay} loop muted>
-            <source src={src} type="video/mp4" />
-          </video>
+          <video
+            ref={videoRef}
+            src={src}
+            type="video/mp4"
+            autoPlay={autoPlay}
+            loop
+            muted
+          />
         ) : (
           <img src={src} />
         )}
       </LazyLoad>
 
-      {/* {overlay && (
-        <Container className="d-flex align-items-stretch h-100 p-0 m-0">
+      {overlay && (
+        <Container className="overlay d-flex align-items-stretch h-100 p-0 m-0">
           <div className="d-flex flex-column justify-content-between w-100 p-3">
             {hasLogo ? <img src={logo} width="45" height="45" /> : <div></div>}
             <p className="m-0">{overlay}</p>
           </div>
         </Container>
-      )} */}
+      )}
     </div>
   );
 }

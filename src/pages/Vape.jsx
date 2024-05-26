@@ -6,24 +6,15 @@ import img4 from "../assets/P7 Vape/vape_2k_00151.jpg";
 import img5 from "../assets/P7 Vape/vape_2k_00283.jpg";
 import { TransparentNavbar } from "../components/TransparentNavbar";
 import { MediaGrid } from "../components/MediaGrid";
+import { MidSection } from "../components/MidSection";
 import { Footer } from "../components/Footer";
-import { Col, Container, Row } from "react-bootstrap";
 
 export default function Vape() {
   return (
     <>
       <TransparentNavbar />
       <div style={{ height: "100vh", width: "100%" }}></div>
-      <div
-        style={{
-          position: "fixed",
-          top: "0",
-          left: "0",
-          right: "0",
-          bottom: "0",
-          zIndex: "-1",
-        }}
-      >
+      <div className="fixed-video">
         <video
           style={{
             width: "100%",
@@ -36,9 +27,11 @@ export default function Vape() {
         ></video>
       </div>
       <div className=" m-0 p-0" style={{ backgroundColor: "black" }}>
+        <br />
+        <MidSection />
         <MediaGrid vids={[{ src: img1 }, { src: img2 }, { src: img3 }]} left />
         <MediaGrid vids={[{ src: img4 }, { src: img5 }]} />
-
+        <br />
         <Footer />
       </div>
     </>

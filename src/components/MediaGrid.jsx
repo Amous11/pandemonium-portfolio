@@ -6,7 +6,7 @@ export function MediaGrid({ vids, left }) {
   return (
     <>
       <Container fluid className="overflow-hidden">
-        <Row className="my-2" style={{ height: "100vh" }}>
+        <Row className="my-1" style={{ height: "100vh" }}>
           {left && (
             <Col md={6} className="p-0 pe-1">
               <Media src={vids[1].src} overlay={vids[1].ctg} insideGrid />
