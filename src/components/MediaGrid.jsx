@@ -11,7 +11,7 @@ export function MediaGrid({ vids, left }) {
             <Col md={6} className="p-0 pe-1">
               <Media
                 src={vids[1].src}
-                overlay={vids[1].ctg}
+                thumbnail={vids[1].thumbnail}
                 path={vids[1].path}
                 insideGrid
               />
@@ -22,7 +22,7 @@ export function MediaGrid({ vids, left }) {
               <Col>
                 <Media
                   src={vids[0].src}
-                  overlay={vids[0].ctg}
+                  thumbnail={vids[0].thumbnail}
                   path={vids[0].path}
                   insideGrid
                 />
@@ -33,7 +33,7 @@ export function MediaGrid({ vids, left }) {
                 <Col>
                   <Media
                     src={vids[2].src}
-                    overlay={vids[2].ctg}
+                    thumbnail={vids[2].thumbnail}
                     path={vids[2].path}
                     insideGrid
                   />
@@ -45,7 +45,7 @@ export function MediaGrid({ vids, left }) {
             <Col md={6} className="p-0 ps-1">
               <Media
                 src={vids[1].src}
-                overlay={vids[1].ctg}
+                thumbnail={vids[1].thumbnail}
                 path={vids[1].path}
                 insideGrid
               />
