@@ -40,7 +40,7 @@ export function Media({ src, overlay, autoPlay, insideGrid, hasLogo }) {
       <LazyLoad>
         {isVideo ? (
           <video ref={videoRef} autoPlay={autoPlay} loop muted>
-            <source src={src} type={`video/${videoType}`} />
+            <source src={src} type={`video/${videoType()}`} />
           </video>
         ) : (
           <img src={src} />
