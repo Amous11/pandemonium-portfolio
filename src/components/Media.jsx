@@ -5,7 +5,11 @@ import LazyLoad from "react-lazy-load";
 import logo from "../assets/logo.png";
 
 export function Media({ src, overlay, autoPlay, insideGrid, hasLogo }) {
-  const isVideo = src.endsWith("mp4");
+  const isVideo = src.endsWith("mp4") || src.endsWith("mov");
+  const videoType = () => {
+    if (src.endsWith("mov")) return "quicktime";
+    else return "mp4";
+  };
   const videoRef = useRef();
 
   const handleMouseEnter = () => {
@@ -29,14 +33,9 @@ export function Media({ src, overlay, autoPlay, insideGrid, hasLogo }) {
     >
       <LazyLoad>
         {isVideo ? (
-          <video
-            ref={videoRef}
-            src={src}
-            type="video/mp4"
-            autoPlay={autoPlay}
-            loop
-            muted
-          />
+          <video ref={videoRef} autoPlay={autoPlay} loop muted>
+            <source src={src} type={`video/${videoType}`} />
+          </video>
         ) : (
           <img src={src} />
         )}

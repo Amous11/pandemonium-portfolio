@@ -29,7 +29,9 @@ export default function Sony() {
         <Media src={img4} />
         <MediaGrid vids={[{ src: img5 }, { src: img6 }, { src: img7 }]} />
         <Media src={img8} />
-        <MediaGrid src={[{ src: img9 }, { src: img10 }, { src: img11 }]} left />
+        <MediaGrid vids={[{ src: img9 }, { src: img10 }]} left />
+        <Media src={img11} />
+
         <br />
         <Footer />
         <PageUp />
