@@ -11,7 +11,7 @@ import { MidSection } from "../components/MidSection";
 import { PageUp } from "../components/PageUp";
 import { Footer } from "../components/Footer";
 
-export default function Kamana() {
+export default function Kamaana() {
   return (
     <>
       <TransparentNavbar />

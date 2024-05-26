@@ -35,9 +35,12 @@ export default function ISC() {
         <Media src={img4} />
         <MediaGrid vids={[{ src: img5 }, { src: img6 }, { src: img7 }]} />
         <Media src={img8} />
-        <MediaGrid src={[{ src: img9 }, { src: img10 }, { src: img11 }]} left />
+        <MediaGrid
+          vids={[{ src: img9 }, { src: img10 }, { src: img11 }]}
+          left
+        />
         <Media src={img12} />
-        <MediaGrid src={[{ src: img13 }, { src: img14 }, { src: img15 }]} />
+        <MediaGrid vids={[{ src: img13 }, { src: img14 }, { src: img15 }]} />
         <Media src={img16} />
         <br />
         <Footer />

@@ -3,8 +3,9 @@ import { useRef } from "react";
 import { Container } from "react-bootstrap";
 import LazyLoad from "react-lazy-load";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
-export function Media({ src, overlay, autoPlay, insideGrid, hasLogo }) {
+export function Media({ src, overlay, autoPlay, insideGrid, hasLogo, path }) {
   const isVideo = src.endsWith("mp4") || src.endsWith("mov");
   const videoType = () => {
     if (src.endsWith("mov")) return "quicktime";
@@ -30,7 +31,7 @@ export function Media({ src, overlay, autoPlay, insideGrid, hasLogo }) {
     }
   };
 
-  return (
+  const content = (
     <div
       className="media-background d-flex align-items-stretch"
       style={{ width: "100%", height: insideGrid ? "100%" : "100vh" }}
@@ -57,6 +58,8 @@ export function Media({ src, overlay, autoPlay, insideGrid, hasLogo }) {
       )}
     </div>
   );
+
+  return <>{path ? <Link to={path}>{content}</Link> : content}</>;
 }
 
 Media.propTypes = {
@@ -65,4 +68,5 @@ Media.propTypes = {
   autoPlay: PropTypes.bool,
   insideGrid: PropTypes.bool,
   hasLogo: PropTypes.bool,
+  path: PropTypes.string,
 };

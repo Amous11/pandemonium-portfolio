@@ -26,7 +26,7 @@ export function TransparentNavbar() {
     <>
       <Navbar style={navbarStyle} fixed="top" expand="sm">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img
               alt=""
               src={logo}
@@ -51,6 +51,9 @@ export function TransparentNavbar() {
                 }}
               >
                 Info
+              </Nav.Link>
+              <Nav.Link className="text-light" href="/">
+                Home
               </Nav.Link>
               <NavDropdown
                 title={<span className="text-light">Portfolio</span>}

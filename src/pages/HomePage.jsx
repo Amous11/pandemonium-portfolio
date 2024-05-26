@@ -25,24 +25,24 @@ export default function HomePage() {
       <MidSection />
       <MediaGrid
         vids={[
-          { src: proHealMP4, ctg: "Colour Reel" },
-          { src: activePeelMP4, ctg: "Beauty Reel" },
-          { src: activeSerumMP4, ctg: "FX Reel" },
+          { src: proHealMP4, ctg: "Colour Reel", path: "/project/ISC" },
+          { src: activePeelMP4, ctg: "Beauty Reel", path: "/project/ISC" },
+          { src: activeSerumMP4, ctg: "FX Reel", path: "/project/ISC" },
         ]}
       />
-      <Media src={smartWatchM4} overlay="Gaming Reel" />
+      <Media src={smartWatchM4} path="/project/Watch" overlay="Gaming Reel" />
       <MediaGrid
         vids={[
-          { src: treatmentMP4, ctg: "Category" },
-          { src: sonyMP4, ctg: "Category" },
-          { src: kamaanaMP4, ctg: "Category" },
+          { src: treatmentMP4, ctg: "Category", path: "/project/ISC" },
+          { src: sonyMP4, ctg: "Category", path: "/project/Sony" },
+          { src: kamaanaMP4, ctg: "Category", path: "/project/Kamaana" },
         ]}
         left
       />
       <MediaGrid
         vids={[
-          { src: aodhMP4, ctg: "Category" },
-          { src: vapeMP4, ctg: "Category" },
+          { src: vapeMP4, ctg: "Category", path: "/project/Vape" },
+          { src: aodhMP4, ctg: "Category", path: "/project/Whiskey" },
         ]}
       />
 

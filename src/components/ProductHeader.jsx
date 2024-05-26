@@ -12,6 +12,7 @@ export function ProductHeader({ video }) {
           }}
           src={video}
           autoPlay
+          loop
           muted
         ></video>
       </div>
