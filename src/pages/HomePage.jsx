@@ -1,5 +1,5 @@
 /* VIDEOS */
-import demoReel from "../assets/demoreelv1.mov";
+import demoReel from "../assets/demoreel.mp4";
 import proHealMP4 from "../assets/P1 ISC/Shot04_v9_pro_heal.mp4";
 import sonyMP4 from "../assets/P2 Sony/sony_with_sound.mp4";
 import kamaanaMP4 from "../assets/P3 Kamaana/wearekamaana_full_AGX.mp4";
