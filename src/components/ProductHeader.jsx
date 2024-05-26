@@ -11,9 +11,8 @@ export function ProductHeader({ video }) {
             height: "100%",
           }}
           src={video}
-          controls
           autoPlay
-          className="video-player"
+          muted
         ></video>
       </div>
     </>

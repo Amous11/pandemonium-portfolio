@@ -14,13 +14,19 @@ export function Media({ src, overlay, autoPlay, insideGrid, hasLogo }) {
 
   const handleMouseEnter = () => {
     if (videoRef.current && !autoPlay) {
-      videoRef.current.play();
+      const promise = videoRef.current.play();
+      if (promise !== undefined) {
+        promise.catch((error) => console.log(error));
+      }
     }
   };
 
   const handleMouseLeave = () => {
     if (videoRef.current && !autoPlay) {
-      videoRef.current.pause();
+      const promise = videoRef.current.pause();
+      if (promise !== undefined) {
+        promise.catch((error) => console.log(error));
+      }
     }
   };
 
