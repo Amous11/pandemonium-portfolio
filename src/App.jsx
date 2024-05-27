@@ -1,26 +1,29 @@
+import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage.jsx";
-import ISC from "./pages/ISC.jsx";
-import Sony from "./pages/Sony.jsx";
-import Kamaana from "./pages/Kamaana.jsx";
-import Neura from "./pages/Neura.jsx";
-import Watch from "./pages/Watch.jsx";
-import Whiskey from "./pages/Whiskey.jsx";
-import Vape from "./pages/Vape.jsx";
+const HomePage = lazy(() => import("./pages/HomePage.jsx"));
+const ISC = lazy(() => import("./pages/ISC.jsx"));
+const Sony = lazy(() => import("./pages/Sony.jsx"));
+const Kamaana = lazy(() => import("./pages/Kamaana.jsx"));
+const Neura = lazy(() => import("./pages/Neura.jsx"));
+const Watch = lazy(() => import("./pages/Watch.jsx"));
+const Whiskey = lazy(() => import("./pages/Whiskey.jsx"));
+const Vape = lazy(() => import("./pages/Vape.jsx"));
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/project/Isc" element={<ISC />} />
-        <Route path="/project/Sony" element={<Sony />} />
-        <Route path="/project/Kamaana" element={<Kamaana />} />
-        <Route path="/project/Neura" element={<Neura />} />
-        <Route path="/project/Watch" element={<Watch />} />
-        <Route path="/project/Whiskey" element={<Whiskey />} />
-        <Route path="/project/Vape" element={<Vape />} />
-      </Routes>
+      <Suspense>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/project/Isc" element={<ISC />} />
+          <Route path="/project/Sony" element={<Sony />} />
+          <Route path="/project/Kamaana" element={<Kamaana />} />
+          <Route path="/project/Neura" element={<Neura />} />
+          <Route path="/project/Watch" element={<Watch />} />
+          <Route path="/project/Whiskey" element={<Whiskey />} />
+          <Route path="/project/Vape" element={<Vape />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }
