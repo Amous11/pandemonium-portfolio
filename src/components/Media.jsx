@@ -1,15 +1,17 @@
 import PropTypes from "prop-types";
-import { useRef, useState } from "react";
 import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
 
 export function Media({ src, thumbnail, autoPlay, insideGrid, path }) {
+  const videoRef = useRef();
+  const [opacity, setOpacity] = useState(1);
+
   const isVideo = src.endsWith("mp4") || src.endsWith("mov");
   const videoType = () => {
     if (src.endsWith("mov")) return "quicktime";
     else return "mp4";
   };
-  const videoRef = useRef();
 
   const handleMouseEnter = () => {
     if (videoRef.current && !autoPlay) {
@@ -30,8 +32,6 @@ export function Media({ src, thumbnail, autoPlay, insideGrid, path }) {
       }
     }
   };
-
-  const [opacity, setOpacity] = useState(1);
 
   const content = (
     <div
