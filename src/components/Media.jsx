@@ -51,7 +51,7 @@ export function Media({ src, thumbnail, autoPlay, insideGrid, path }) {
       </LazyLoad>
 
       {thumbnail && (
-        <div className="overlay m-0 p-0">
+        <div className="media-overlay m-0 p-0">
           <LazyLoad>
             <img src={thumbnail} style={{ opacity: opacity }} />
           </LazyLoad>

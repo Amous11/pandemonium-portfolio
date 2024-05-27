@@ -1,9 +1,11 @@
+/* Global */
+
 body {
   background-color: #000000;
   color: white;
-  animation: slide-up 2s ease-out;
+  /* animation: slide-up 2s ease-out; */
 }
-
+/* 
 @keyframes slide-up {
   0% {
     transform: translateY(100%);
@@ -13,7 +15,14 @@ body {
     transform: translateY(0);
     opacity: 1;
   }
+} */
+
+a{
+  color: gray;
 }
+
+/* Project Pages */
+
 .fixed-video{
   position: fixed;
   top: 0;
@@ -22,6 +31,8 @@ body {
   bottom:0;
   z-index: -1;
 }
+
+/* Media Component */
 
 .media-background {
   position: relative;
@@ -38,7 +49,7 @@ body {
   object-fit: cover;
 }
 
-.overlay{
+.media-overlay{
   position: absolute;
   top: 0;
   left: 0;
@@ -46,10 +57,17 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.overlay img {
+.media-overlay img {
   transition: opacity 0.4s ease-in-out;
 }
 
-a{
-  color: gray;
+/* Lazy Loading */
+
+.LazyLoad{
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.is-visible{
+  opacity: 1; 
 }
