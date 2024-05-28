@@ -1,1 +1,0 @@
-import{j as e}from"./index-D4UqexjF.js";import{c as r}from"./PageUp-HRvHuGO8.js";function s({video:t}){return e.jsxs(e.Fragment,{children:[e.jsx("div",{style:{height:"100vh",width:"100%"}}),e.jsx("div",{className:"fixed-video",children:e.jsx("video",{style:{width:"100%",height:"100%"},src:t,autoPlay:!0,loop:!0,muted:!0})})]})}s.propTypes={video:r.string};export{s as P};
