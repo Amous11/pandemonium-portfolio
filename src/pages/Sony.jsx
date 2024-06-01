@@ -9,33 +9,32 @@ import img8 from "../assets/P2 Sony/gif 1.gif";
 import img9 from "../assets/P2 Sony/gif 2.gif";
 import img10 from "../assets/P2 Sony/gif 3.gif";
 import img11 from "../assets/P2 Sony/gif 4.gif";
+import { ProjectDescription } from "../components/ProjectDescription";
 import { TransparentNavbar } from "../components/TransparentNavbar";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
-import { MidSection } from "../components/MidSection";
 import { PageUp } from "../components/PageUp";
 import { Footer } from "../components/Footer";
 import { Media } from "../components/Media";
 
 export default function Sony() {
+  const description =
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus rerum voluptas eveniet sequi veritatis possimus voluptate saepe, error totam recusandae. Labore ea ipsam saepe adipisci laboriosam id, voluptate repellendus dolorem consequuntur minima, voluptas modi quisquam maiores aperiam quidem illum nihil! Ipsam laboriosam labore, quasi expedita similique est. Sapiente, repellat quae!";
   return (
     <>
       <TransparentNavbar />
       <ProductHeader video={video} />
-      <div className="m-0 p-0" style={{ backgroundColor: "black" }}>
-        <br />
-        <MidSection />
-        <MediaGrid vids={[{ src: img1 }, { src: img3 }]} left />
-        <Media src={img4} />
-        <MediaGrid vids={[{ src: img5 }, { src: img6 }, { src: img7 }]} />
-        <Media src={img8} />
-        <MediaGrid vids={[{ src: img9 }, { src: img10 }]} left />
-        <Media src={img11} />
+      <ProjectDescription title="Sony" desc={description} />
+      <MediaGrid vids={[{ src: img1 }, { src: img3 }]} left />
+      <Media src={img4} />
+      <MediaGrid vids={[{ src: img5 }, { src: img6 }, { src: img7 }]} />
+      <Media src={img8} />
+      <MediaGrid vids={[{ src: img9 }, { src: img10 }]} left />
+      <Media src={img11} />
 
-        <br />
-        <Footer />
-        <PageUp />
-      </div>
+      <br />
+      <Footer />
+      <PageUp />
     </>
   );
 }

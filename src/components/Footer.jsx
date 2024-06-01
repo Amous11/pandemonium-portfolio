@@ -12,7 +12,7 @@ export function Footer() {
             <Row>
               <Col>
                 <p>
-                  <b>© 2023 Pandemonium, Inc.</b>
+                  <b>© 2023 Pandemonium Visuals, Inc.</b>
                 </p>
               </Col>
               <Col></Col>
@@ -22,16 +22,23 @@ export function Footer() {
             <p style={{ color: "grey" }}>Contact</p>
             <p>-</p>
             <p>
-              <a href="mailto:info@pandemonium.com">info@pandemonium.com</a>
+              <a href="mailto:contact@pandemoniumvisuals.com">
+                contact@pandemoniumvisuals.com
+              </a>
             </p>
           </Col>
           <Col xs={12} md={2}>
             <p style={{ color: "grey" }}>Social</p>
             <p>-</p>
             <Stack>
-              <a href="">Instagram</a>
-              <a href="">Behance</a>
-              <a href="">Youtube</a>
+              <div>
+                <a href="https://www.linkedin.com/company/pandemonium-visuals">
+                  LinkedIn
+                </a>
+              </div>
+              <div>
+                <a href="">Instagram</a>
+              </div>
             </Stack>
           </Col>
         </Row>

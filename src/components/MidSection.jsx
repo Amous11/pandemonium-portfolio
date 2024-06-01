@@ -23,9 +23,14 @@ export function MidSection() {
             <p style={{ color: "grey" }}>Social</p>
             <p>-</p>
             <Stack>
-              <a href="">Instagram</a>
-              <a href="">Behance</a>
-              <a href="">Youtube</a>
+              <div>
+                <a href="https://www.linkedin.com/company/pandemonium-visuals">
+                  LinkedIn
+                </a>
+              </div>
+              <div>
+                <a href="">Instagram</a>
+              </div>
             </Stack>
           </Col>
           <Col xs={12} md={3}>
@@ -34,7 +39,10 @@ export function MidSection() {
             <p>
               If you have a scheduling inquiry for our creative services or wish
               to chat about an upcoming project need, please contact us at
-              <a href="mailto:info@pandemonium.com"> info@pandemonium.com</a>
+              <a href="mailto:contact@pandemoniumvisuals.com">
+                {" "}
+                contact@pandemoniumvisuals.com
+              </a>
             </p>
           </Col>
         </Row>

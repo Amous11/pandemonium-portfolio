@@ -35,7 +35,9 @@ export function Media({ src, thumbnail, autoPlay, insideGrid, path }) {
 
   const content = (
     <div
-      className="media-background d-flex align-items-stretch"
+      className={`media-background d-flex align-items-stretch ${
+        insideGrid ? "" : "my-1"
+      }`}
       style={{ width: "100%", height: insideGrid ? "100%" : "100vh" }}
       onMouseEnter={isVideo ? handleMouseEnter : undefined}
       onMouseLeave={isVideo ? handleMouseLeave : undefined}

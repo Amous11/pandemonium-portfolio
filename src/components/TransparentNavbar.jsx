@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import logo from "../assets/logo.png";
+import PropTypes from "prop-types";
 
-export function TransparentNavbar() {
+export function TransparentNavbar({ solid }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -24,7 +25,11 @@ export function TransparentNavbar() {
 
   return (
     <>
-      <Navbar style={navbarStyle} fixed="top" expand="sm">
+      <Navbar
+        style={solid ? { backgroundColor: "black" } : navbarStyle}
+        fixed={solid ? "" : "top"}
+        expand="sm"
+      >
         <Container>
           <Navbar.Brand href="/">
             <img
@@ -44,6 +49,10 @@ export function TransparentNavbar() {
             className="justify-content-end"
           >
             <Nav>
+              <NavDropdown title={<span className="text-light">Gallerie</span>}>
+                <NavDropdown.Item>Installations</NavDropdown.Item>
+                <NavDropdown.Item>CGI</NavDropdown.Item>
+              </NavDropdown>
               <Nav.Link
                 className="text-light"
                 onClick={() => {
@@ -52,15 +61,6 @@ export function TransparentNavbar() {
               >
                 Info
               </Nav.Link>
-              <Nav.Link className="text-light" href="/">
-                Home
-              </Nav.Link>
-              <NavDropdown
-                title={<span className="text-light">Portfolio</span>}
-              >
-                <NavDropdown.Item>Installations</NavDropdown.Item>
-                <NavDropdown.Item>CGI</NavDropdown.Item>
-              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -68,3 +68,6 @@ export function TransparentNavbar() {
     </>
   );
 }
+TransparentNavbar.propTypes = {
+  solid: PropTypes.bool,
+};

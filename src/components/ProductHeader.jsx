@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 export function ProductHeader({ video }) {
   return (
     <>
-      <div style={{ height: "100vh", width: "100%" }}></div>
-      <div className="fixed-video">
+      <div>
         <video
           style={{
             width: "100%",
@@ -14,6 +13,7 @@ export function ProductHeader({ video }) {
           autoPlay
           loop
           muted
+          controls
         ></video>
       </div>
     </>

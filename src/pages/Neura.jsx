@@ -6,29 +6,29 @@ import img4 from "../assets/P4 Neura/vlcsnap-2023-02-21-19h05m10s885.png";
 import img5 from "../assets/P4 Neura/vlcsnap-2023-02-21-19h05m19s426.png";
 import img6 from "../assets/P4 Neura/vlcsnap-2023-02-21-19h05m30s910.png";
 import img7 from "../assets/P4 Neura/vlcsnap-2023-02-21-19h06m38s101.png";
+import { ProjectDescription } from "../components/ProjectDescription";
 import { TransparentNavbar } from "../components/TransparentNavbar";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
-import { MidSection } from "../components/MidSection";
 import { PageUp } from "../components/PageUp";
 import { Footer } from "../components/Footer";
 import { Media } from "../components/Media";
 
 export default function Neura() {
+  const description =
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus rerum voluptas eveniet sequi veritatis possimus voluptate saepe, error totam recusandae. Labore ea ipsam saepe adipisci laboriosam id, voluptate repellendus dolorem consequuntur minima, voluptas modi quisquam maiores aperiam quidem illum nihil! Ipsam laboriosam labore, quasi expedita similique est. Sapiente, repellat quae!";
+
   return (
     <>
       <TransparentNavbar />
       <ProductHeader video={video} />
-      <div className="m-0 p-0" style={{ backgroundColor: "black" }}>
-        <br />
-        <MidSection />
-        <MediaGrid vids={[{ src: img1 }, { src: img2 }, { src: img3 }]} left />
-        <Media src={img4} />
-        <MediaGrid vids={[{ src: img5 }, { src: img6 }, { src: img7 }]} />
-        <br />
-        <Footer />
-        <PageUp />
-      </div>
+      <ProjectDescription title="Neura" desc={description} />
+      <MediaGrid vids={[{ src: img1 }, { src: img2 }, { src: img3 }]} left />
+      <Media src={img4} />
+      <MediaGrid vids={[{ src: img5 }, { src: img6 }, { src: img7 }]} />
+      <br />
+      <Footer />
+      <PageUp />
     </>
   );
 }
