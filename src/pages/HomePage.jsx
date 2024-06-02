@@ -26,7 +26,7 @@ export default function HomePage() {
   return (
     <>
       <TransparentNavbar />
-      <Media src={demoReel} autoPlay />
+      <Media src={demoReel} autoPlay noMargin />
       <MidSection />
       <MediaGrid
         vids={[

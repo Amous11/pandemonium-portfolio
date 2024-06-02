@@ -3,7 +3,15 @@ import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
-export function Media({ src, thumbnail, autoPlay, insideGrid, path, volume }) {
+export function Media({
+  src,
+  thumbnail,
+  autoPlay,
+  insideGrid,
+  path,
+  volume,
+  noMargin,
+}) {
   const videoRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
 
@@ -42,7 +50,7 @@ export function Media({ src, thumbnail, autoPlay, insideGrid, path, volume }) {
   const content = (
     <div
       className={`media-background d-flex align-items-stretch ${
-        insideGrid ? "" : "my-1"
+        insideGrid || noMargin ? "" : "my-1"
       }`}
       style={{ width: "100%", height: insideGrid ? "100%" : "100vh" }}
       onMouseEnter={isVideo ? handleMouseEnter : undefined}
@@ -83,4 +91,5 @@ Media.propTypes = {
   insideGrid: PropTypes.bool,
   path: PropTypes.string,
   volume: PropTypes.number,
+  noMargin: PropTypes.bool,
 };
