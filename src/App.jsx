@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
+import { TransparentNavbar } from "./components/TransparentNavbar.jsx";
 const HomePage = lazy(() => import("./pages/HomePage.jsx"));
 const ISC = lazy(() => import("./pages/ISC.jsx"));
 const Sony = lazy(() => import("./pages/Sony.jsx"));
@@ -13,6 +14,7 @@ function App() {
   const location = useLocation();
   return (
     <>
+      <TransparentNavbar />
       <Suspense>
         <LazyMotion features={domAnimation}>
           <AnimatePresence>

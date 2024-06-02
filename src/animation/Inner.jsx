@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { pageTransition, pageVariants } from "./animationVariants";
 import { Footer } from "../components/Footer";
 import { PageUp } from "../components/PageUp";
-import { TransparentNavbar } from "../components/TransparentNavbar";
 
 export function Inner({ children }) {
   return (
@@ -14,7 +13,6 @@ export function Inner({ children }) {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <TransparentNavbar />
       {children}
       <Footer />
       <PageUp />
