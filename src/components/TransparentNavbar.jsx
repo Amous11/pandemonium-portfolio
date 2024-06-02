@@ -18,16 +18,11 @@ export function TransparentNavbar({ solid }) {
     };
   }, [isScrolled]);
 
-  const navbarStyle = {
-    backgroundColor: isScrolled ? "rgba(0, 0, 0, 1)" : "rgba(0, 0, 0, 0)",
-    transition: "background-color 0.5s ease",
-  };
-
   return (
     <>
       <Navbar
-        style={solid ? { backgroundColor: "black" } : navbarStyle}
-        fixed={solid ? "" : "top"}
+        className={solid || isScrolled ? "navbar-solid" : "navbar-transparent"}
+        fixed="top"
         expand="sm"
       >
         <Container>

@@ -3,19 +3,7 @@
 body {
   background-color: #000000;
   color: white;
-  /* animation: slide-up 2s ease-out; */
 }
-/* 
-@keyframes slide-up {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-} */
 
 a{
   color: gray;
@@ -48,6 +36,17 @@ a{
 }
 .media-overlay img {
   transition: opacity 0.4s ease-in-out;
+}
+
+/* NavBar Animation */
+
+.navbar-transparent{
+  background-color: rgba(0,0,0,0);
+  transition: all .5s ease;
+}
+.navbar-solid{
+  background-color: rgba(0,0,0,1);
+  transition: all .5s ease;
 }
 
 /* Lazy Loading */
