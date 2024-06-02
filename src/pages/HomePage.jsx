@@ -13,18 +13,17 @@ import neuraJPG from "../assets/P4 Neura/vlcsnap-2023-02-21-19h05m19s426.png";
 import whiskeyJPG from "../assets/P6 Whiskey/0469.jpg";
 import vapeJPG from "../assets/P7 Vape/vape_2k_00118.jpg";
 /* COMPONENTS */
-import { TransparentNavbar } from "../components/TransparentNavbar.jsx";
 import { Media } from "../components/Media.jsx";
 import { MediaGrid } from "../components/MediaGrid.jsx";
 import { MidSection } from "../components/MidSection.jsx";
 import { Footer } from "../components/Footer.jsx";
 import { PageUp } from "../components/PageUp.jsx";
+import { Inner } from "../animation/Inner.jsx";
 
 export default function HomePage() {
   return (
-    <>
-      <TransparentNavbar />
-      <Media src={demoReel} autoPlay noMargin />
+    <Inner>
+      <Media src={demoReel} autoPlay />
       <MidSection />
       <MediaGrid
         vids={[
@@ -46,6 +45,6 @@ export default function HomePage() {
       />
       <PageUp />
       <Footer />
-    </>
+    </Inner>
   );
 }

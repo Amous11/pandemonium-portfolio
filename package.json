@@ -11,10 +11,11 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "framer-motion": "^11.2.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-components": "^0.5.1",
+    "react-dom": "^18.2.0",
     "react-lazy-load": "^4.0.1",
     "react-router-dom": "^6.23.1"
   },
