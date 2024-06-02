@@ -32,12 +32,22 @@ export function Footer() {
             <p>-</p>
             <Stack>
               <div>
-                <a href="https://www.linkedin.com/company/pandemonium-visuals">
+                <a
+                  href="https://www.linkedin.com/company/pandemonium-visuals"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   LinkedIn
                 </a>
               </div>
               <div>
-                <a href="">Instagram</a>
+                <a
+                  href="https://www.instagram.com/pandemomium.visuals/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
               </div>
             </Stack>
           </Col>
