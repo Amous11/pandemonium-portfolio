@@ -7,11 +7,8 @@ import img5 from "../assets/P4 Neura/vlcsnap-2023-02-21-19h05m19s426.png";
 import img6 from "../assets/P4 Neura/vlcsnap-2023-02-21-19h05m30s910.png";
 import img7 from "../assets/P4 Neura/vlcsnap-2023-02-21-19h06m38s101.png";
 import { ProjectDescription } from "../components/ProjectDescription";
-import { TransparentNavbar } from "../components/TransparentNavbar";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
-import { PageUp } from "../components/PageUp";
-import { Footer } from "../components/Footer";
 import { Media } from "../components/Media";
 import { Inner } from "../animation/Inner";
 
@@ -21,15 +18,12 @@ export default function Neura() {
 
   return (
     <Inner>
-      <TransparentNavbar />
       <ProductHeader video={video} />
       <ProjectDescription title="Neura" desc={description} />
       <MediaGrid vids={[{ src: img1 }, { src: img2 }, { src: img3 }]} left />
       <Media src={img4} />
       <MediaGrid vids={[{ src: img5 }, { src: img6 }, { src: img7 }]} />
       <br />
-      <Footer />
-      <PageUp />
     </Inner>
   );
 }

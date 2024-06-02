@@ -13,8 +13,6 @@ import img12 from "../assets/P1 ISC/v22_active serum.jpg";
 import img13 from "../assets/P1 ISC/v25_active serum.jpg";
 import { ProjectDescription } from "../components/ProjectDescription";
 import { MediaGrid } from "../components/MediaGrid";
-import { PageUp } from "../components/PageUp";
-import { Footer } from "../components/Footer";
 import { Media } from "../components/Media";
 import { Inner } from "../animation/Inner";
 
@@ -33,8 +31,6 @@ export default function ISC() {
       <MediaGrid vids={[{ src: img10 }, { src: img11 }, { src: img12 }]} />
       <Media src={img13} />
       <br />
-      <Footer />
-      <PageUp />
     </Inner>
   );
 }

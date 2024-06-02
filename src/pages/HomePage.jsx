@@ -16,14 +16,12 @@ import vapeJPG from "../assets/P7 Vape/vape_2k_00118.jpg";
 import { Media } from "../components/Media.jsx";
 import { MediaGrid } from "../components/MediaGrid.jsx";
 import { MidSection } from "../components/MidSection.jsx";
-import { Footer } from "../components/Footer.jsx";
-import { PageUp } from "../components/PageUp.jsx";
 import { Inner } from "../animation/Inner.jsx";
 
 export default function HomePage() {
   return (
     <Inner>
-      <Media src={demoReel} autoPlay />
+      <Media src={demoReel} autoPlay noMargin />
       <MidSection />
       <MediaGrid
         vids={[
@@ -43,8 +41,6 @@ export default function HomePage() {
         ]}
         left
       />
-      <PageUp />
-      <Footer />
     </Inner>
   );
 }

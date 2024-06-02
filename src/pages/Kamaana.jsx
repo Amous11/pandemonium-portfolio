@@ -8,8 +8,6 @@ import { ProjectDescription } from "../components/ProjectDescription";
 import { TransparentNavbar } from "../components/TransparentNavbar";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
-import { PageUp } from "../components/PageUp";
-import { Footer } from "../components/Footer";
 import { Inner } from "../animation/Inner";
 
 export default function Kamaana() {
@@ -24,8 +22,6 @@ export default function Kamaana() {
       <MediaGrid vids={[{ src: img1 }, { src: img2 }, { src: img3 }]} left />
       <MediaGrid vids={[{ src: img4 }, { src: img5 }]} />
       <br />
-      <Footer />
-      <PageUp />
     </Inner>
   );
 }
