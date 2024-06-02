@@ -5,7 +5,6 @@ const ISC = lazy(() => import("./pages/ISC.jsx"));
 const Sony = lazy(() => import("./pages/Sony.jsx"));
 const Kamaana = lazy(() => import("./pages/Kamaana.jsx"));
 const Neura = lazy(() => import("./pages/Neura.jsx"));
-const Watch = lazy(() => import("./pages/Watch.jsx"));
 const Whiskey = lazy(() => import("./pages/Whiskey.jsx"));
 const Vape = lazy(() => import("./pages/Vape.jsx"));
 
@@ -19,7 +18,6 @@ function App() {
           <Route path="/project/Sony" element={<Sony />} />
           <Route path="/project/Kamaana" element={<Kamaana />} />
           <Route path="/project/Neura" element={<Neura />} />
-          <Route path="/project/Watch" element={<Watch />} />
           <Route path="/project/Whiskey" element={<Whiskey />} />
           <Route path="/project/Vape" element={<Vape />} />
         </Routes>
