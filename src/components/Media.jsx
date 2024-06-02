@@ -1,11 +1,17 @@
 import PropTypes from "prop-types";
 import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export function Media({ src, thumbnail, autoPlay, insideGrid, path }) {
-  const videoRef = useRef();
+export function Media({ src, thumbnail, autoPlay, insideGrid, path, volume }) {
+  const videoRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    if (videoRef.current && volume) {
+      videoRef.current.volume = volume;
+    }
+  }, [volume]);
 
   const isVideo = src.endsWith("mp4") || src.endsWith("mov");
   const videoType = () => {
@@ -44,7 +50,12 @@ export function Media({ src, thumbnail, autoPlay, insideGrid, path }) {
     >
       <LazyLoad>
         {isVideo ? (
-          <video ref={videoRef} autoPlay={autoPlay} loop muted>
+          <video
+            ref={videoRef}
+            autoPlay={autoPlay}
+            loop
+            muted={volume ? false : true}
+          >
             <source src={src} type={`video/${videoType()}`} />
           </video>
         ) : (
@@ -71,4 +82,5 @@ Media.propTypes = {
   autoPlay: PropTypes.bool,
   insideGrid: PropTypes.bool,
   path: PropTypes.string,
+  volume: PropTypes.number,
 };
