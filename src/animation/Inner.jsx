@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { pageTransition, pageVariants } from "./animationVariants";
 import { Footer } from "../components/Footer";
-import { PageUp } from "../components/PageUp";
 
 export function Inner({ children }) {
   return (
@@ -15,7 +14,6 @@ export function Inner({ children }) {
     >
       {children}
       <Footer />
-      <PageUp />
     </motion.div>
   );
 }

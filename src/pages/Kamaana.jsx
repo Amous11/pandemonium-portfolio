@@ -5,7 +5,6 @@ import img3 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00414.jpg";
 import img4 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00482.jpg";
 import img5 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00631.jpg";
 import { ProjectDescription } from "../components/ProjectDescription";
-import { TransparentNavbar } from "../components/TransparentNavbar";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
 import { Inner } from "../animation/Inner";
@@ -16,7 +15,6 @@ export default function Kamaana() {
 
   return (
     <Inner>
-      <TransparentNavbar />
       <ProductHeader video={video} />
       <ProjectDescription title="Kamaana" desc={description} />
       <MediaGrid vids={[{ src: img1 }, { src: img2 }, { src: img3 }]} left />
