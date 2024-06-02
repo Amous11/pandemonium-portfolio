@@ -15,17 +15,16 @@ import watchJPG from "../assets/P5 Watch/2k_smartwatch_00373.jpg";
 import whiskeyJPG from "../assets/P6 Whiskey/0469.jpg";
 import vapeJPG from "../assets/P7 Vape/vape_2k_00118.jpg";
 /* COMPONENTS */
-import { TransparentNavbar } from "../components/TransparentNavbar.jsx";
 import { Media } from "../components/Media.jsx";
 import { MediaGrid } from "../components/MediaGrid.jsx";
 import { MidSection } from "../components/MidSection.jsx";
 import { Footer } from "../components/Footer.jsx";
 import { PageUp } from "../components/PageUp.jsx";
+import { Inner } from "../animation/Inner.jsx";
 
 export default function HomePage() {
   return (
-    <>
-      <TransparentNavbar />
+    <Inner>
       <Media src={demoReel} autoPlay />
       <MidSection />
       <MediaGrid
@@ -49,6 +48,6 @@ export default function HomePage() {
       />
       <PageUp />
       <Footer />
-    </>
+    </Inner>
   );
 }

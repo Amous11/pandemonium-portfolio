@@ -13,13 +13,14 @@ import { MediaGrid } from "../components/MediaGrid";
 import { PageUp } from "../components/PageUp";
 import { Footer } from "../components/Footer";
 import { Media } from "../components/Media";
+import { Inner } from "../animation/Inner";
 
 export default function Neura() {
   const description =
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus rerum voluptas eveniet sequi veritatis possimus voluptate saepe, error totam recusandae. Labore ea ipsam saepe adipisci laboriosam id, voluptate repellendus dolorem consequuntur minima, voluptas modi quisquam maiores aperiam quidem illum nihil! Ipsam laboriosam labore, quasi expedita similique est. Sapiente, repellat quae!";
 
   return (
-    <>
+    <Inner>
       <TransparentNavbar />
       <ProductHeader video={video} />
       <ProjectDescription title="Neura" desc={description} />
@@ -29,6 +30,6 @@ export default function Neura() {
       <br />
       <Footer />
       <PageUp />
-    </>
+    </Inner>
   );
 }
