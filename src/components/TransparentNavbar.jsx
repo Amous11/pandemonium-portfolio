@@ -44,7 +44,7 @@ export function TransparentNavbar({ solid }) {
             className="justify-content-end"
           >
             <Nav>
-              <NavDropdown title={<span className="text-light">Gallerie</span>}>
+              <NavDropdown title={<span className="text-light">Gallery</span>}>
                 <NavDropdown.Item>Installations</NavDropdown.Item>
                 <NavDropdown.Item>CGI</NavDropdown.Item>
               </NavDropdown>
