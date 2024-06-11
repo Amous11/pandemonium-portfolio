@@ -7,7 +7,9 @@ export function ProjectDescription({ title, desc }) {
       <Container>
         <Row className="my-5">
           <Col xs={12} md={3}>
-            <p style={{ color: "grey" }}>Title</p>
+            <p style={{ color: "grey" }} id="info">
+              Title
+            </p>
             <p>-</p>
             <Row>
               <Col xs={6}>

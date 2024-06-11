@@ -6,7 +6,7 @@ export function ProductHeader({ video }) {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.volume = 0.1;
+      videoRef.current.volume = 1;
     }
   });
 

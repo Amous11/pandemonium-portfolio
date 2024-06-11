@@ -12,7 +12,7 @@ export function Footer() {
             <Row>
               <Col>
                 <p>
-                  <b>© 2022 Pandemonium Visuals, Inc.</b>
+                  <b>© 2024 Pandemonium Visuals, Inc.</b>
                 </p>
               </Col>
               <Col></Col>

@@ -6,7 +6,9 @@ export function MidSection() {
       <Container>
         <Row className="my-5">
           <Col xs={12} md={6}>
-            <p style={{ color: "grey" }}>About</p>
+            <p style={{ color: "grey" }} id="info">
+              About
+            </p>
             <p>-</p>
             <Row>
               <Col xs={6}>
@@ -48,9 +50,8 @@ export function MidSection() {
             <p>-</p>
             <p>
               If you have a scheduling inquiry for our creative services or wish
-              to chat about an upcoming project need, please contact us at
+              to chat about an upcoming project need, please contact us at{" "}
               <a href="mailto:contact@pandemoniumvisuals.com">
-                {" "}
                 contact@pandemoniumvisuals.com
               </a>
             </p>
