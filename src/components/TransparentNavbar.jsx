@@ -50,15 +50,12 @@ export function TransparentNavbar({ solid }) {
               </NavDropdown>
               <Nav.Link
                 className="text-light"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setTimeout(() => {
-                    const targetElement = document.querySelector("#info");
-                    window.scrollTo({
-                      top: targetElement.offsetTop - 90,
-                      behavior: "smooth",
-                    });
-                  }, 200);
+                onClick={() => {
+                  const targetElement = document.querySelector("#info");
+                  window.scrollTo({
+                    top: targetElement.offsetTop - 90,
+                    behavior: "smooth",
+                  });
                 }}
               >
                 Info

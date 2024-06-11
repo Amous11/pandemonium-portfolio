@@ -22,7 +22,10 @@ export function Footer() {
             <p style={{ color: "grey" }}>Contact</p>
             <p>-</p>
             <p>
-              <a href="mailto:contact@pandemoniumvisuals.com">
+              <a
+                href="mailto:contact@pandemoniumvisuals.com"
+                className="text-break"
+              >
                 contact@pandemoniumvisuals.com
               </a>
             </p>

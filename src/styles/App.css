@@ -38,6 +38,14 @@ a{
   transition: opacity 0.4s ease-in-out;
 }
 
+.mute-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 32px;
+  width: 32px;
+}
+
 /* NavBar Animation */
 
 .navbar-transparent{

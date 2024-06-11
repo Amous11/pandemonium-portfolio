@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { Button } from "react-bootstrap";
 
 export function Media({
   src,
@@ -11,13 +12,15 @@ export function Media({
   path,
   volume,
   noMargin,
+  muteButton,
 }) {
   const videoRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
+  const [muted, setMuted] = useState(muteButton);
 
   useEffect(() => {
-    if (videoRef.current && volume) {
-      videoRef.current.volume = volume;
+    if (videoRef.current) {
+      videoRef.current.volume = volume ? volume : 1;
     }
   }, [volume]);
 
@@ -44,6 +47,14 @@ export function Media({
       if (promise !== undefined) {
         promise.catch((error) => console.log(error));
       }
+    }
+  };
+
+  const handleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      videoRef.current.controls = !videoRef.current.controls;
+      setMuted(false);
     }
   };
 
@@ -78,6 +89,12 @@ export function Media({
           </LazyLoad>
         </div>
       )}
+
+      {muted && (
+        <Button variant="link" className="mute-button m-4" onClick={handleMute}>
+          <img src="../public/muted.ico" height={32} width={32} />
+        </Button>
+      )}
     </div>
   );
 
@@ -92,4 +109,5 @@ Media.propTypes = {
   path: PropTypes.string,
   volume: PropTypes.number,
   noMargin: PropTypes.bool,
+  muteButton: PropTypes.bool,
 };

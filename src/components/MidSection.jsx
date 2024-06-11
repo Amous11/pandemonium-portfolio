@@ -51,7 +51,10 @@ export function MidSection() {
             <p>
               If you have a scheduling inquiry for our creative services or wish
               to chat about an upcoming project need, please contact us at{" "}
-              <a href="mailto:contact@pandemoniumvisuals.com">
+              <a
+                href="mailto:contact@pandemoniumvisuals.com"
+                className="text-break"
+              >
                 contact@pandemoniumvisuals.com
               </a>
             </p>

@@ -21,7 +21,7 @@ import { Inner } from "../animation/Inner.jsx";
 export default function HomePage() {
   return (
     <Inner>
-      <Media src={demoReel} autoPlay noMargin />
+      <Media src={demoReel} autoPlay noMargin muteButton />
       <MidSection />
       <MediaGrid
         vids={[
