@@ -3,6 +3,7 @@ import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
+import vol from "../assets/mute.ico";
 
 export function Media({
   src,
@@ -92,7 +93,7 @@ export function Media({
 
       {muted && (
         <Button variant="link" className="mute-button m-4" onClick={handleMute}>
-          <img src="../public/muted.ico" height={32} width={32} />
+          <img src={vol} height={32} width={32} />
         </Button>
       )}
     </div>
