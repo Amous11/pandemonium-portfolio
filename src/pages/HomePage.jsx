@@ -4,14 +4,18 @@ import proHealMP4 from "../assets/P1 ISC/7.jpg";
 import sonyMP4 from "../assets/P2 Sony/sony_with_sound.mp4";
 import kamaanaMP4 from "../assets/P3 Kamaana/wearekamaana_full_AGX.mp4";
 import neuraMP4 from "../assets/P4 Neura/iBotONE_teaser_008_final.mp4";
+import carMP4 from "../assets/P5 Speed Car/Speed_Car.mp4";
 import aodhMP4 from "../assets/P6 Whiskey/New Final.mp4";
 import vapeMP4 from "../assets/P7 Vape/vape_2k_1.mp4";
+// import bagMP4 from "../assets/P8 MK_Bag/Video Render.mp4";
 /* THUMBNAILS */
 import sonyJPG from "../assets/P2 Sony/7.jpg";
 import kamaanaJPG from "../assets/P3 Kamaana/wearekamaana_full_AGX_00414.jpg";
 import neuraJPG from "../assets/P4 Neura/vlcsnap-2023-02-21-19h05m19s426.png";
+import carJPG from "../assets/P5 Speed Car/Speed_Car_Sh08_V03.jpg";
 import whiskeyJPG from "../assets/P6 Whiskey/0469.jpg";
 import vapeJPG from "../assets/P7 Vape/vape_2k_00118.jpg";
+// import bagJPG from "../assets/P8 MK_Bag/1326.tif";
 /* COMPONENTS */
 import { Media } from "../components/Media.jsx";
 import { MediaGrid } from "../components/MediaGrid.jsx";
@@ -41,6 +45,12 @@ export default function HomePage() {
           { src: kamaanaMP4, path: "/project/Kamaana", thumbnail: kamaanaJPG },
         ]}
         left
+      />
+      <MediaGrid
+        vids={[
+          { src: carMP4, path: "/project/SpeedCar", thumbnail: carJPG },
+          // { src: bagMP4, path: "/project/MKBag", thumbnail: bagJPG },
+        ]}
       />
     </Inner>
   );
