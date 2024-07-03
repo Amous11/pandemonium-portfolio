@@ -14,7 +14,7 @@ export default function SpeedCar() {
   return (
     <Inner>
       <ProductHeader video={video} />
-      <ProjectDescription title="Vape" desc={description} />
+      <ProjectDescription title="Speed Car" desc={description} />
       <MediaGrid vids={[{ src: img1 }, { src: img2 }]} />
       <MediaGrid vids={[{ src: img3 }, { src: img4 }]} />
       <br />
