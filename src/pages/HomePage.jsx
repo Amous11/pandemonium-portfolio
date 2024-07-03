@@ -38,6 +38,7 @@ export default function HomePage() {
           { src: vapeMP4, path: "/project/Vape", thumbnail: vapeJPG },
         ]}
       />
+      <Media src={carMP4} path="/project/SpeedCar" thumbnail={carJPG} />
       <MediaGrid
         vids={[
           { src: aodhMP4, path: "/project/Whiskey", thumbnail: whiskeyJPG },
@@ -46,12 +47,12 @@ export default function HomePage() {
         ]}
         left
       />
-      <MediaGrid
+      {/* <MediaGrid
         vids={[
           { src: carMP4, path: "/project/SpeedCar", thumbnail: carJPG },
           // { src: bagMP4, path: "/project/MKBag", thumbnail: bagJPG },
         ]}
-      />
+      /> */}
     </Inner>
   );
 }
