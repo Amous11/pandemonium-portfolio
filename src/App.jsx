@@ -10,6 +10,7 @@ const Kamaana = lazy(() => import("./pages/Kamaana.jsx"));
 const Neura = lazy(() => import("./pages/Neura.jsx"));
 const Whiskey = lazy(() => import("./pages/Whiskey.jsx"));
 const Vape = lazy(() => import("./pages/Vape.jsx"));
+const SpeedCar = lazy(() => import("./pages/SpeedCar.jsx"));
 
 function App() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function App() {
               <Route path="/project/Neura" element={<Neura />} />
               <Route path="/project/Whiskey" element={<Whiskey />} />
               <Route path="/project/Vape" element={<Vape />} />
+              <Route path="/project/SpeedCar" element={<SpeedCar />} />
             </Routes>
           </AnimatePresence>
         </LazyMotion>
