@@ -45,7 +45,7 @@ export function Footer() {
               </div>
               <div>
                 <a
-                  href="https://www.instagram.com/pandemomium.visuals/"
+                  href="https://www.instagram.com/pandemonium.visuals/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

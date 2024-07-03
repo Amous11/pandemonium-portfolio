@@ -14,7 +14,7 @@ import img13 from "../assets/P1 ISC/v25_active serum.jpg";
 import { ProjectDescription } from "../components/ProjectDescription";
 import { MediaGrid } from "../components/MediaGrid";
 import { Media } from "../components/Media";
-import { Inner } from "../animation/Inner";
+import { Inner } from "../components/animation/Inner";
 
 export default function ISC() {
   const description =

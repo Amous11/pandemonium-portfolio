@@ -19,7 +19,8 @@
     "react-components": "^0.5.1",
     "react-dom": "^18.2.0",
     "react-lazy-load": "^4.0.1",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "react-router-hash-link": "^2.4.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

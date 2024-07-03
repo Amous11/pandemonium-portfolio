@@ -7,7 +7,7 @@ import img5 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00631.jpg";
 import { ProjectDescription } from "../components/ProjectDescription";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
-import { Inner } from "../animation/Inner";
+import { Inner } from "../components/animation/Inner";
 
 export default function Kamaana() {
   const description =

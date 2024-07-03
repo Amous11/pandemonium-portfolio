@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import PropTypes from "prop-types";
+import { HashLink as Link } from "react-router-hash-link";
 
 export function TransparentNavbar({ solid }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,10 +45,18 @@ export function TransparentNavbar({ solid }) {
             className="justify-content-end"
           >
             <Nav>
-              <NavDropdown title={<span className="text-light">Gallery</span>}>
+              {/* <NavDropdown title={<span className="text-light">Gallery</span>}>
                 <NavDropdown.Item>Installations</NavDropdown.Item>
                 <NavDropdown.Item>CGI</NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
+              <Nav.Link className="text-light">
+                <Link
+                  to="/#gallery"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  Gallery
+                </Link>
+              </Nav.Link>
               <Nav.Link
                 className="text-light"
                 onClick={() => {

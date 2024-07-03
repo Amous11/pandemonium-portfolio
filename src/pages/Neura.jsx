@@ -10,7 +10,7 @@ import { ProjectDescription } from "../components/ProjectDescription";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
 import { Media } from "../components/Media";
-import { Inner } from "../animation/Inner";
+import { Inner } from "../components/animation/Inner";
 
 export default function Neura() {
   const description =
