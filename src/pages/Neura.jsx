@@ -11,15 +11,15 @@ import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
 import { Media } from "../components/Media";
 import { Inner } from "../components/animation/Inner";
+import { projects } from "../utils/globals";
 
 export default function Neura() {
-  const description =
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus rerum voluptas eveniet sequi veritatis possimus voluptate saepe, error totam recusandae. Labore ea ipsam saepe adipisci laboriosam id, voluptate repellendus dolorem consequuntur minima, voluptas modi quisquam maiores aperiam quidem illum nihil! Ipsam laboriosam labore, quasi expedita similique est. Sapiente, repellat quae!";
+  const project = projects.find((p) => p.name === "Neura");
 
   return (
     <Inner>
       <ProductHeader video={video} />
-      <ProjectDescription title="Neura" desc={description} />
+      <ProjectDescription title={project.name} desc={project.description} />
       <MediaGrid vids={[{ src: img1 }, { src: img2 }, { src: img3 }]} left />
       <Media src={img4} />
       <MediaGrid vids={[{ src: img5 }, { src: img6 }, { src: img7 }]} />

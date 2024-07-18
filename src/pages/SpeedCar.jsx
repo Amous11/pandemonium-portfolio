@@ -7,14 +7,15 @@ import { ProjectDescription } from "../components/ProjectDescription";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
 import { Inner } from "../components/animation/Inner";
+import { projects } from "../utils/globals";
 
 export default function SpeedCar() {
-  const description =
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus rerum voluptas eveniet sequi veritatis possimus voluptate saepe, error totam recusandae. Labore ea ipsam saepe adipisci laboriosam id, voluptate repellendus dolorem consequuntur minima, voluptas modi quisquam maiores aperiam quidem illum nihil! Ipsam laboriosam labore, quasi expedita similique est. Sapiente, repellat quae!";
+  const project = projects.find((p) => p.name === "Speed Car");
+
   return (
     <Inner>
       <ProductHeader video={video} />
-      <ProjectDescription title="Speed Car" desc={description} />
+      <ProjectDescription title={project.name} desc={project.description} />
       <MediaGrid vids={[{ src: img1 }, { src: img2 }]} />
       <MediaGrid vids={[{ src: img3 }, { src: img4 }]} />
       <br />

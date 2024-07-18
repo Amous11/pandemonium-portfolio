@@ -22,7 +22,7 @@ export function ProjectDescription({ title, desc }) {
           <Col xs={12} md={9}>
             <p style={{ color: "grey" }}>Description</p>
             <p>-</p>
-            <p>{desc}</p>
+            <div dangerouslySetInnerHTML={{ __html: desc }} />
           </Col>
         </Row>
       </Container>
@@ -32,5 +32,5 @@ export function ProjectDescription({ title, desc }) {
 
 ProjectDescription.propTypes = {
   title: PropTypes.string,
-  desc: PropTypes.string,
+  desc: PropTypes.node,
 };

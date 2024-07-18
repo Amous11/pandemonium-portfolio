@@ -20,43 +20,37 @@ export function TransparentNavbar({ solid }) {
   }, [isScrolled]);
 
   return (
-    <>
-      <Navbar
-        className={solid || isScrolled ? "navbar-solid" : "navbar-transparent"}
-        fixed="top"
-        expand="sm"
-      >
-        <Container>
-          <Navbar.Brand href="/">
-            <img
-              alt=""
-              src={logo}
-              width="45"
-              height="45"
-              className="d-inline-block"
-            />{" "}
-            <span className="d-inline-block text-uppercase ps-2 text-light">
-              Pandemonium
-            </span>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            className="justify-content-end"
-          >
-            <Nav>
-              {/* <NavDropdown title={<span className="text-light">Gallery</span>}>
-                <NavDropdown.Item>Installations</NavDropdown.Item>
-                <NavDropdown.Item>CGI</NavDropdown.Item>
-              </NavDropdown> */}
-              <Nav.Link className="text-light">
-                <Link
-                  to="/#gallery"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                >
-                  Gallery
-                </Link>
-              </Nav.Link>
+    <Navbar
+      className={solid || isScrolled ? "navbar-solid" : "navbar-transparent"}
+      fixed="top"
+      expand="sm"
+    >
+      <Container>
+        <Navbar.Brand href="/">
+          <img
+            alt=""
+            src={logo}
+            width="45"
+            height="45"
+            className="d-inline-block"
+          />{" "}
+          <span className="d-inline-block text-uppercase ps-2 text-light">
+            Pandemonium
+          </span>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav>
+            <Nav.Item>
+              <Link
+                to="/#gallery"
+                className="nav-link text-light"
+                style={{ textDecoration: "none" }}
+              >
+                Gallery
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
               <Nav.Link
                 className="text-light"
                 onClick={() => {
@@ -69,13 +63,14 @@ export function TransparentNavbar({ solid }) {
               >
                 Info
               </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
+
 TransparentNavbar.propTypes = {
   solid: PropTypes.bool,
 };
