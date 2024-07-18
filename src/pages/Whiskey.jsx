@@ -1,9 +1,3 @@
-import video from "../assets/P6 Whiskey/New Final.mp4";
-import img1 from "../assets/P6 Whiskey/0094.jpg";
-import img2 from "../assets/P6 Whiskey/0329.jpg";
-import img3 from "../assets/P6 Whiskey/0417.jpg";
-import img4 from "../assets/P6 Whiskey/0469.jpg";
-import img5 from "../assets/P6 Whiskey/test.jpg";
 import { ProjectDescription } from "../components/ProjectDescription";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
@@ -12,6 +6,19 @@ import { projects } from "../utils/globals";
 
 export default function Whiskey() {
   const project = projects.find((p) => p.name === "Whiskey");
+
+  const video =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1718289695/P6%20Whiskey/New_Final_h6l1x0.mp4";
+  const img1 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289378/P6%20Whiskey/test_v2nzx6.jpg";
+  const img2 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289368/P6%20Whiskey/0469_ndm5xu.jpg";
+  const img3 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289368/P6%20Whiskey/0417_woncll.jpg";
+  const img4 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289364/P6%20Whiskey/0329_yimoc6.jpg";
+  const img5 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289363/P6%20Whiskey/0094_bpg52n.jpg";
 
   return (
     <Inner>

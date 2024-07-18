@@ -1,9 +1,3 @@
-import video from "../assets/P3 Kamaana/wearekamaana_full_AGX.mp4";
-import img1 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00000.jpg";
-import img2 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00201.jpg";
-import img3 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00414.jpg";
-import img4 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00482.jpg";
-import img5 from "../assets/P3 Kamaana/wearekamaana_full_AGX_00631.jpg";
 import { ProjectDescription } from "../components/ProjectDescription";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
@@ -12,6 +6,19 @@ import { projects } from "../utils/globals";
 
 export default function Kamaana() {
   const project = projects.find((p) => p.name === "Kamaana");
+
+  const video =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1718289708/P3%20Kamaana/wearekamaana_full_AGX_jked0p.mp4";
+  const img1 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289392/P3%20Kamaana/wearekamaana_full_AGX_00000_lujogj.jpg";
+  const img2 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289365/P3%20Kamaana/wearekamaana_full_AGX_00631_jpp1p2.jpg";
+  const img3 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289363/P3%20Kamaana/wearekamaana_full_AGX_00482_ozjakw.jpg";
+  const img4 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289361/P3%20Kamaana/wearekamaana_full_AGX_00414_jmblpp.jpg";
+  const img5 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289360/P3%20Kamaana/wearekamaana_full_AGX_00201_bpuxn9.jpg";
 
   return (
     <Inner>

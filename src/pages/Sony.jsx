@@ -1,14 +1,3 @@
-import video from "../assets/P2 Sony/sony_with_sound.mp4";
-import img1 from "../assets/P2 Sony/1.jpg";
-import img3 from "../assets/P2 Sony/3.jpg";
-import img4 from "../assets/P2 Sony/4.jpg";
-import img5 from "../assets/P2 Sony/5.jpg";
-import img6 from "../assets/P2 Sony/6.jpg";
-import img7 from "../assets/P2 Sony/7.jpg";
-import img8 from "../assets/P2 Sony/Gif 1.mp4";
-import img9 from "../assets/P2 Sony/Gif 2.mp4";
-import img10 from "../assets/P2 Sony/Gif 3.mp4";
-import img11 from "../assets/P2 Sony/Gif 4.mp4";
 import { ProjectDescription } from "../components/ProjectDescription";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
@@ -18,6 +7,29 @@ import { projects } from "../utils/globals";
 
 export default function Sony() {
   const project = projects.find((p) => p.name === "Sony");
+
+  const video =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1718289635/P2%20Sony/sony_with_sound_xmc9fi.mp4";
+  const img1 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289344/P2%20Sony/1_uwhfab.jpg";
+  const img3 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289484/P2%20Sony/3_jecjql.jpg";
+  const img4 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289351/P2%20Sony/4_ngplt7.jpg";
+  const img5 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289352/P2%20Sony/5_lebqmo.jpg";
+  const img6 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289352/P2%20Sony/5_lebqmo.jpg";
+  const img7 =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289354/P2%20Sony/7_iqpgak.jpg";
+  const img8 =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1718289419/P2%20Sony/Gif_1_nmxyjk.mp4";
+  const img9 =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1718289463/P2%20Sony/Gif_2_wfsavr.mp4";
+  const img10 =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1718289358/P2%20Sony/Gif_3_totx95.mp4";
+  const img11 =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1718289504/P2%20Sony/Gif_4_j9xbvc.mp4";
 
   return (
     <Inner>

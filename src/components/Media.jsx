@@ -68,7 +68,7 @@ export function Media({
       onMouseEnter={isVideo ? handleMouseEnter : undefined}
       onMouseLeave={isVideo ? handleMouseLeave : undefined}
     >
-      <LazyLoad>
+      <LazyLoad offset={300}>
         {isVideo ? (
           <video
             ref={videoRef}
@@ -85,7 +85,7 @@ export function Media({
 
       {thumbnail && (
         <div className="media-overlay m-0 p-0">
-          <LazyLoad>
+          <LazyLoad offset={300}>
             <img src={thumbnail} style={{ opacity: opacity }} />
           </LazyLoad>
         </div>
