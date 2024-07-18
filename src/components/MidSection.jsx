@@ -1,4 +1,5 @@
 import { Col, Container, Row, Stack } from "react-bootstrap";
+import { link, mail } from "../utils/globals";
 
 export function MidSection() {
   return (
@@ -27,7 +28,7 @@ export function MidSection() {
             <Stack>
               <div>
                 <a
-                  href="https://www.linkedin.com/company/pandemonium-visuals"
+                  href={link.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -36,7 +37,7 @@ export function MidSection() {
               </div>
               <div>
                 <a
-                  href="https://www.instagram.com/pandemonium.visuals/"
+                  href={link.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -51,10 +52,7 @@ export function MidSection() {
             <p>
               If you have a scheduling inquiry for our creative services or wish
               to chat about an upcoming project need, please contact us at{" "}
-              <a
-                href="mailto:contact@pandemoniumvisuals.com"
-                className="text-break"
-              >
+              <a href={mail.contact} className="text-break">
                 contact@pandemoniumvisuals.com
               </a>
             </p>

@@ -1,3 +1,12 @@
+export const link = {
+  instagram: "https://www.instagram.com/pandemonium.visuals/",
+  linkedin: "https://www.linkedin.com/company/pandemonium-visuals",
+};
+
+export const mail = {
+  contact: "mailto:contact@pandemoniumvisuals.com",
+};
+
 export const projects = [
   {
     name: "ISC",

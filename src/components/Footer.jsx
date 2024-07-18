@@ -1,4 +1,5 @@
 import { Col, Container, Row, Stack } from "react-bootstrap";
+import { link, mail } from "../utils/globals";
 
 export function Footer() {
   return (
@@ -22,10 +23,7 @@ export function Footer() {
             <p style={{ color: "grey" }}>Contact</p>
             <p>-</p>
             <p>
-              <a
-                href="mailto:contact@pandemoniumvisuals.com"
-                className="text-break"
-              >
+              <a href={mail.contact} className="text-break">
                 contact@pandemoniumvisuals.com
               </a>
             </p>
@@ -36,7 +34,7 @@ export function Footer() {
             <Stack>
               <div>
                 <a
-                  href="https://www.linkedin.com/company/pandemonium-visuals"
+                  href={link.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -45,7 +43,7 @@ export function Footer() {
               </div>
               <div>
                 <a
-                  href="https://www.instagram.com/pandemonium.visuals/"
+                  href={link.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
