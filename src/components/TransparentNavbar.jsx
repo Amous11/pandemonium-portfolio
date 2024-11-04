@@ -25,7 +25,7 @@ export function TransparentNavbar({ solid }) {
       fixed="top"
       expand="sm"
     >
-      <Container>
+      <Container fluid>
         <Navbar.Brand href="/">
           <img
             alt=""

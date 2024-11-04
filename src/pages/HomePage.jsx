@@ -6,7 +6,7 @@ import { MidSection } from "../components/MidSection.jsx";
 export default function HomePage() {
   /* VIDEOS */
   const demoReel =
-    "https://res.cloudinary.com/amouscloud/video/upload/v1718289882/demoreel_yldl1t.mp4";
+    "https://res.cloudinary.com/amouscloud/video/upload/v1722279081/demoreel_gylwgd.mp4";
   const proHealMP4 =
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289403/P1%20ISC/7_kmihmy.jpg";
   const sonyMP4 =
@@ -21,7 +21,8 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289695/P6%20Whiskey/New_Final_h6l1x0.mp4";
   const vapeMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289521/P7%20Vape/vape_2k_1_vegmez.mp4";
-  // import bagMP4 from "../assets/P8 MK_Bag/Video Render.mp4";
+  const bagMP4 =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1722264466/P8%20MK_Bag/Video_Render_atfrrw.mp4";
 
   /* THUMBNAILS */
   const sonyJPG =
@@ -36,7 +37,8 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289368/P6%20Whiskey/0469_ndm5xu.jpg";
   const vapeJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289378/P7%20Vape/vape_2k_00118_fgl7o0.jpg";
-  // import bagJPG from "../assets/P8 MK_Bag/1326.tif";
+  const bagJPG =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1722264200/P8%20MK_Bag/1326_ytspgl.jpg";
 
   return (
     <Inner>
@@ -49,7 +51,7 @@ export default function HomePage() {
             src: proHealMP4,
             path: "/project/ISC",
           },
-          { src: neuraMP4, path: "/project/Neura", thumbnail: neuraJPG },
+          { src: bagMP4, path: "/project/MKBag", thumbnail: bagJPG },
           { src: vapeMP4, path: "/project/Vape", thumbnail: vapeJPG },
         ]}
       />
@@ -62,12 +64,7 @@ export default function HomePage() {
         ]}
         left
       />
-      {/* <MediaGrid
-          vids={[
-            { src: carMP4, path: "/project/SpeedCar", thumbnail: carJPG },
-            // { src: bagMP4, path: "/project/MKBag", thumbnail: bagJPG },
-          ]}
-        /> */}
+      <Media src={neuraMP4} path="/project/Neura" thumbnail={neuraJPG} />
     </Inner>
   );
 }

@@ -3,6 +3,7 @@ import { AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { TransparentNavbar } from "./components/TransparentNavbar.jsx";
 import { PageUp } from "./components/PageUp";
+import MKBag from "./pages/MKBag.jsx";
 const HomePage = lazy(() => import("./pages/HomePage.jsx"));
 const ISC = lazy(() => import("./pages/ISC.jsx"));
 const Sony = lazy(() => import("./pages/Sony.jsx"));
@@ -29,6 +30,7 @@ function App() {
               <Route path="/project/Whiskey" element={<Whiskey />} />
               <Route path="/project/Vape" element={<Vape />} />
               <Route path="/project/SpeedCar" element={<SpeedCar />} />
+              <Route path="/project/mkbag" element={<MKBag />} />
             </Routes>
           </AnimatePresence>
         </LazyMotion>
