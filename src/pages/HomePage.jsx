@@ -32,7 +32,7 @@ export default function HomePage() {
   const sonyJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289354/P2%20Sony/7_iqpgak.jpg";
   const kamaanaJPG =
-    "https://res.cloudinary.com/amouscloud/image/upload/v1718289361/P3%20Kamaana/wearekamaana_full_AGX_00414_jmblpp.jpg";
+    "https://res.cloudinary.com/amouscloud/image/upload/v1732282031/P3%20Kamaana/selfcare2_niuqye.webp";
   const neuraJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289403/P4%20Neura/vlcsnap-2023-02-21-19h05m30s910_yzqshf.png";
   const carJPG =

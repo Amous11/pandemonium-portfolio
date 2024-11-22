@@ -5,7 +5,7 @@ import { Media } from "../components/Media";
 import { Inner } from "../components/animation/Inner";
 import { projects } from "../utils/globals";
 
-export default function Kamaana() {
+export default function Keyboard() {
   const project = projects.find((p) => p.name === "Keyboard");
 
   const video =
