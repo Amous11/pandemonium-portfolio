@@ -23,6 +23,10 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289521/P7%20Vape/vape_2k_1_vegmez.mp4";
   const bagMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1722264466/P8%20MK_Bag/Video_Render_atfrrw.mp4";
+  const keyboardMP4 =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1732281947/P9%20OP%E2%80%931%20-%20teenage%20engineering%20%21/0001-0120_tc6rlv.mp4";
+  const lotionMP4 =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1732282025/P10%20Body%20Lotion/Body_lotion_FInal_for_upload_iqepsj.mp4";
 
   /* THUMBNAILS */
   const sonyJPG =
@@ -39,6 +43,10 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289378/P7%20Vape/vape_2k_00118_fgl7o0.jpg";
   const bagJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1722264200/P8%20MK_Bag/1326_ytspgl.jpg";
+  const keyboardJPG =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1732281916/P9%20OP%E2%80%931%20-%20teenage%20engineering%20%21/still4_h5ylgw.webp";
+  const lotionJPG =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1732281916/P10%20Body%20Lotion/body_lotion_final_montage_0171_xhgopo.webp";
 
   return (
     <Inner>
@@ -64,7 +72,17 @@ export default function HomePage() {
         ]}
         left
       />
-      <Media src={neuraMP4} path="/project/Neura" thumbnail={neuraJPG} />
+      <MediaGrid
+        vids={[
+          { src: neuraMP4, path: "/project/Neura", thumbnail: neuraJPG },
+          {
+            src: keyboardMP4,
+            path: "/project/Keyboard",
+            thumbnail: keyboardJPG,
+          },
+          { src: lotionMP4, path: "/project/Lotion", thumbnail: lotionJPG },
+        ]}
+      />
     </Inner>
   );
 }

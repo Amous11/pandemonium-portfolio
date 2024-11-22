@@ -12,6 +12,7 @@ const Neura = lazy(() => import("./pages/Neura.jsx"));
 const Whiskey = lazy(() => import("./pages/Whiskey.jsx"));
 const Vape = lazy(() => import("./pages/Vape.jsx"));
 const SpeedCar = lazy(() => import("./pages/SpeedCar.jsx"));
+const Keyboard = lazy(() => import("./pages/Keyboard.jsx"));
 
 function App() {
   const location = useLocation();
@@ -31,6 +32,7 @@ function App() {
               <Route path="/project/Vape" element={<Vape />} />
               <Route path="/project/SpeedCar" element={<SpeedCar />} />
               <Route path="/project/mkbag" element={<MKBag />} />
+              <Route path="/project/keyboard" element={<Keyboard />} />
             </Routes>
           </AnimatePresence>
         </LazyMotion>
