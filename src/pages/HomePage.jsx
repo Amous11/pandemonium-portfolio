@@ -67,11 +67,11 @@ export default function HomePage() {
       <MediaGrid
         vids={[
           { src: aodhMP4, path: "/project/Whiskey", thumbnail: whiskeyJPG },
-          { src: sonyMP4, path: "/project/Sony", thumbnail: sonyJPG },
           { src: kamaanaMP4, path: "/project/Kamaana", thumbnail: kamaanaJPG },
         ]}
         left
       />
+      <Media src={sonyMP4} path="/project/Sony" thumbnail={sonyJPG} />
       <MediaGrid
         vids={[
           { src: neuraMP4, path: "/project/Neura", thumbnail: neuraJPG },
