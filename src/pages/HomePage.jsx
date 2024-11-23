@@ -7,7 +7,7 @@ export default function HomePage() {
   /* VIDEOS */
   const demoReel =
     "https://res.cloudinary.com/amouscloud/video/upload/v1722279081/demoreel_gylwgd.mp4";
-  const proHealMP4 =
+  const iscMP4 =
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289403/P1%20ISC/7_kmihmy.jpg";
   const sonyMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289635/P2%20Sony/sony_with_sound_xmc9fi.mp4";
@@ -17,7 +17,7 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289745/P4%20Neura/iBotONE_teaser_008_final_tihft8.mp4";
   const carMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1720043790/P5%20Speed%20Car/Speed_Car_sd4dnm.mp4";
-  const aodhMP4 =
+  const whiskeyMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289695/P6%20Whiskey/New_Final_h6l1x0.mp4";
   const vapeMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289521/P7%20Vape/vape_2k_1_vegmez.mp4";
@@ -55,19 +55,20 @@ export default function HomePage() {
       <span id="gallery" />
       <MediaGrid
         vids={[
+          { src: lotionMP4, path: "/project/Lotion", thumbnail: lotionJPG },
           {
-            src: proHealMP4,
-            path: "/project/ISC",
+            src: keyboardMP4,
+            path: "/project/Keyboard",
+            thumbnail: keyboardJPG,
           },
           { src: bagMP4, path: "/project/MKBag", thumbnail: bagJPG },
-          { src: vapeMP4, path: "/project/Vape", thumbnail: vapeJPG },
         ]}
       />
       <Media src={carMP4} path="/project/SpeedCar" thumbnail={carJPG} />
       <MediaGrid
         vids={[
-          { src: aodhMP4, path: "/project/Whiskey", thumbnail: whiskeyJPG },
-          { src: kamaanaMP4, path: "/project/Kamaana", thumbnail: kamaanaJPG },
+          { src: vapeMP4, path: "/project/Vape", thumbnail: vapeJPG },
+          { src: whiskeyMP4, path: "/project/Whiskey", thumbnail: whiskeyJPG },
         ]}
         left
       />
@@ -75,12 +76,11 @@ export default function HomePage() {
       <MediaGrid
         vids={[
           { src: neuraMP4, path: "/project/Neura", thumbnail: neuraJPG },
+          { src: kamaanaMP4, path: "/project/Kamaana", thumbnail: kamaanaJPG },
           {
-            src: keyboardMP4,
-            path: "/project/Keyboard",
-            thumbnail: keyboardJPG,
+            src: iscMP4,
+            path: "/project/ISC",
           },
-          { src: lotionMP4, path: "/project/Lotion", thumbnail: lotionJPG },
         ]}
       />
     </Inner>
