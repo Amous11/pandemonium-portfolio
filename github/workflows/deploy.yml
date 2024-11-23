@@ -35,5 +35,5 @@ jobs:
           server: ftp://ftp.pandemoniumvisuals.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: /dist # Path to the build directory
+          local-dir: dist # Path to the build directory
           server-dir: /public_html/ # Remote directory on the server
