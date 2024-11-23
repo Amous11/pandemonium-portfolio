@@ -35,13 +35,22 @@ jobs:
           cd dist
           zip -r ../deploy.zip ./*
           cd ..
+          ls -la  # Verify zip was created
 
-      - name: 📂 Deploy to Namecheap
-        uses: developeranaz/namecheap-cpanel-upload@main
-        with:
-          hostname: ${{ secrets.HOSTNAME }} # your domain or subdomain e.g., pandemoniumvisuals.com
-          cpanel_username: ${{ secrets.FTP_USERNAME }} # usually starts with your domain e.g., pandem1
-          cpanel_password: ${{ secrets.FTP_PASSWORD }}
-          remote_directory: "/public_html"
-          local_directory: "."
-          only_files: "deploy.zip"
+      - name: Install lftp
+        run: sudo apt-get install lftp
+
+      - name: Deploy with lftp
+        run: |
+          echo "Starting FTP upload..."
+          lftp -d -e "
+          set ssl:verify-certificate no;
+          set ftp:ssl-force true;
+          set ftp:ssl-protect-data true;
+          open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ftp.pandemoniumvisuals.com;
+          pwd;
+          ls;
+          put -O /public_html deploy.zip;
+          ls -la /public_html;
+          bye"
+          echo "FTP upload completed"
