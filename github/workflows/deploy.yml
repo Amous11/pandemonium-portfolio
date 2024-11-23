@@ -36,19 +36,12 @@ jobs:
           zip -r ../deploy.zip ./*
           cd ..
 
-      - name: Upload zip to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@4.3.5
+      - name: 📂 Deploy to Namecheap
+        uses: developeranaz/namecheap-cpanel-upload@main
         with:
-          server: ftp.pandemoniumvisuals.com:21
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./
-          server-dir: /public_html/
-          include: |
-            deploy.zip
-          exclude: |
-            **/*
-            !deploy.zip
-          state-name: .ftp-deploy-sync-state.json
-          log-level: verbose
+          hostname: ${{ secrets.HOSTNAME }} # your domain or subdomain e.g., pandemoniumvisuals.com
+          cpanel_username: ${{ secrets.FTP_USERNAME }} # usually starts with your domain e.g., pandem1
+          cpanel_password: ${{ secrets.FTP_PASSWORD }}
+          remote_directory: "/public_html"
+          local_directory: "."
+          only_files: "deploy.zip"
