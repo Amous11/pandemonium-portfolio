@@ -12,7 +12,7 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Step 2: Set up Node.js
       - name: Set up Node.js
@@ -30,10 +30,10 @@ jobs:
 
       # Step 5: Deploy via FTP
       - name: Deploy to Namecheap
-        uses: SamKirkland/FTP-Deploy-Action@4.6.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
         with:
           server: ftp://ftp.pandemoniumvisuals.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: /dist # Path to the build directory
-          server-dir: /public_html/ # Remote directory on the server
+          local-dir: ./dist/ # Path to the build directory
+          server-dir: public_html/ # Remote directory on the server
