@@ -35,7 +35,7 @@ export function TransparentNavbar({ solid }) {
             className="d-inline-block"
           />{" "}
           <span className="d-inline-block text-uppercase ps-2 text-light">
-            Pandemonium
+            PandemoniumTest
           </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
