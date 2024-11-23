@@ -1,0 +1,39 @@
+name: Deploy React App to Namecheap
+
+on:
+  push:
+    branches:
+      - main # Deploy on push to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20 # Use the appropriate Node.js version
+
+      # Step 3: Install dependencies
+      - name: Install Dependencies
+        run: pnpm install
+
+      # Step 4: Build the React app
+      - name: Build React App
+        run: pnpm run build
+
+      # Step 5: Deploy via FTP
+      - name: Deploy to Namecheap
+        uses: SamKirkland/FTP-Deploy-Action@4.6.0
+        with:
+          server: ftp://ftp.pandemoniumvisuals.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: /dist # Path to the build directory
+          server-dir: /public_html/ # Remote directory on the server
