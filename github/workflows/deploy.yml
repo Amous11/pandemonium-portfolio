@@ -36,33 +36,19 @@ jobs:
           zip -r ../deploy.zip ./*
           cd ..
 
-      - name: Deploy to cPanel
-        run: |
-          # Create a temporary file for the authentication cookie
-          touch cookie.txt
-
-          # Login to cPanel and get session cookie
-          curl -c cookie.txt -k "https://pandemoniumvisuals.com:2083/login/?login_only=1" \
-            -d "user=${{ secrets.FTP_USERNAME }}&pass=${{ secrets.FTP_PASSWORD }}"
-
-          # Upload zip file
-          curl -b cookie.txt -k "https://pandemoniumvisuals.com:2083/execute/Fileman/upload_files" \
-            -F "file=@deploy.zip" \
-            -F "dir=/public_html"
-
-          # Delete old assets and index.html
-          curl -b cookie.txt -k "https://pandemoniumvisuals.com:2083/execute/Fileman/delete_file" \
-            -d "file=/public_html/assets" \
-            -d "file=/public_html/index.html"
-
-          # Extract zip file
-          curl -b cookie.txt -k "https://pandemoniumvisuals.com:2083/execute/Fileman/extract_file" \
-            -d "file=/public_html/deploy.zip" \
-            -d "dest=/public_html"
-
-          # Delete the zip file
-          curl -b cookie.txt -k "https://pandemoniumvisuals.com:2083/execute/Fileman/delete_file" \
-            -d "file=/public_html/deploy.zip"
-
-          # Remove cookie file
-          rm cookie.txt
+      - name: Upload zip to cPanel
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
+        with:
+          server: ftp.pandemoniumvisuals.com:21
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./
+          server-dir: /public_html/
+          include: |
+            deploy.zip
+          exclude: |
+            **/*
+            !deploy.zip
+          state-name: .ftp-deploy-sync-state.json
+          log-level: verbose
