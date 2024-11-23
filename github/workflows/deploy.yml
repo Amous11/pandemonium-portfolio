@@ -13,15 +13,16 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9.13.2
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 9
+          cache: "pnpm"
 
       - name: Install Dependencies
         run: pnpm install
@@ -29,7 +30,12 @@ jobs:
       - name: Build React App
         run: pnpm run build
 
-      - name: Deploy to Namecheap
+      - name: Create deployment package
+        run: |
+          cd dist
+          zip -r ../deploy.zip ./*
+
+      - name: Upload and extract on cPanel
         uses: SamKirkland/FTP-Deploy-Action@4.3.5
         with:
           server: ftp.pandemoniumvisuals.com
@@ -37,7 +43,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /public_html/
-          dangerous-clean-slate: false
-          exlude: |
-            .htaccess
-            .well-known/**
+          exclude: |
+            **/.htaccess
+            **/.well-known/**
+          dangerous-clean-slate: true # This will remove old files except excluded ones
