@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { AnimatePresence, LazyMotion, domAnimation } from "motion/react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { TransparentNavbar } from "./components/TransparentNavbar.jsx";
@@ -17,12 +17,17 @@ const Lotion = lazy(() => import("./pages/Lotion.jsx"));
 
 function App() {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <>
       <TransparentNavbar />
       <Suspense>
         <LazyMotion features={domAnimation}>
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<HomePage />} />
               <Route path="/project/Isc" element={<ISC />} />
