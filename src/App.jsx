@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
+import { AnimatePresence, LazyMotion, domAnimation } from "motion/react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { TransparentNavbar } from "./components/TransparentNavbar.jsx";
 import { PageUp } from "./components/PageUp";

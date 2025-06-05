@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { pageTransition, pageVariants } from "./animationVariants";
 import { Footer } from "../Footer";
 
