@@ -32,7 +32,7 @@ export function TransparentNavbar({ solid }) {
             src={logo}
             width="45"
             height="45"
-            className="d-inline-block"
+            className="d-inline-block d-none" // remove d-none to display logo
           />{" "}
           <span className="d-inline-block text-uppercase ps-2 text-light">
             Pandemonium
