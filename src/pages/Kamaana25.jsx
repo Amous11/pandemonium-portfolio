@@ -1,7 +1,6 @@
 import { ProjectDescription } from "../components/ProjectDescription";
 import { ProductHeader } from "../components/ProductHeader";
 import { MediaGrid } from "../components/MediaGrid";
-import { Media } from "../components/Media";
 import { Inner } from "../components/animation/Inner";
 import { projects } from "../utils/globals";
 
@@ -30,12 +29,6 @@ export default function Kamaana() {
       <MediaGrid vids={[{ src: img1 }, { src: img2 }]} />
       <MediaGrid vids={[{ src: img3 }, { src: img4 }]} />
       <MediaGrid vids={[{ src: img5 }, { src: img6 }]} />
-      {/* <Media src={img1} />
-      <Media src={img2} />
-      <Media src={img3} />
-      <Media src={img4} />
-      <Media src={img5} />
-      <Media src={img6} /> */}
       <br />
     </Inner>
   );

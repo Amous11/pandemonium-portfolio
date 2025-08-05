@@ -14,7 +14,7 @@ export default function HomePage() {
   const kamaanaMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289708/P3%20Kamaana/wearekamaana_full_AGX_jked0p.mp4";
   const kamaana25MP4 =
-    "https://res.cloudinary.com/amouscloud/video/upload/v1754406895/P12%20Kamaana%202025/teaser_snopg9.mp4";
+    "https://res.cloudinary.com/amouscloud/video/upload/v1754405788/P12%20Kamaana%202025/Reveal_Final_u5kchw.mp4";
   const neuraMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289745/P4%20Neura/iBotONE_teaser_008_final_tihft8.mp4";
   const carMP4 =
@@ -35,8 +35,6 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289354/P2%20Sony/7_iqpgak.jpg";
   const kamaanaJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1732282031/P3%20Kamaana/selfcare2_niuqye.webp";
-  // const kamaana25JPG =
-  //   "https://res.cloudinary.com/amouscloud/image/upload/v1732282031/P3%20Kamaana/selfcare2_niuqye.webp";
   const neuraJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289403/P4%20Neura/vlcsnap-2023-02-21-19h05m30s910_yzqshf.png";
   const carJPG =
@@ -51,6 +49,8 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/image/upload/v1732281916/P9%20OP%E2%80%931%20-%20teenage%20engineering%20%21/still4_h5ylgw.webp";
   const lotionJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1732281916/P10%20Body%20Lotion/body_lotion_final_montage_0171_xhgopo.webp";
+  const kamaana25JPG =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1754405771/P12%20Kamaana%202025/Images/1__opgdl8.webp";
 
   return (
     <Inner>
@@ -61,16 +61,22 @@ export default function HomePage() {
         vids={[
           { src: lotionMP4, path: "/project/Lotion", thumbnail: lotionJPG },
           {
+            src: kamaana25MP4,
+            path: "/project/Kamaana25",
+            thumbnail: kamaana25JPG,
+          },
+          {
             src: keyboardMP4,
             path: "/project/Keyboard",
             thumbnail: keyboardJPG,
           },
-          { src: bagMP4, path: "/project/MKBag", thumbnail: bagJPG },
         ]}
+        left
       />
       <Media src={carMP4} path="/project/SpeedCar" thumbnail={carJPG} />
       <MediaGrid
         vids={[
+          { src: bagMP4, path: "/project/MKBag", thumbnail: bagJPG },
           { src: vapeMP4, path: "/project/Vape", thumbnail: vapeJPG },
           { src: whiskeyMP4, path: "/project/Whiskey", thumbnail: whiskeyJPG },
         ]}
@@ -87,7 +93,6 @@ export default function HomePage() {
           },
         ]}
       />
-      <Media src={kamaana25MP4} path="/project/Kamaana25" />
     </Inner>
   );
 }
