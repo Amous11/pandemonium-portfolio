@@ -28,9 +28,9 @@ export const projects = [
   {
     name: "Kamaana",
     description: `
-      Create visually captivating media for 
+      Created visually captivating media for 
       <a href="https://www.instagram.com/wearekamaana/?hl=en" target="_blank" rel="noopener noreferrer">Kamaana's</a> 
-      new curly haircare product, utilizing dynamic visuals and engaging
+      new curly hair care product, utilizing dynamic visuals and engaging
       graphics to showcase the product and reinforce the brand's
       identity.
     `,

@@ -25,10 +25,11 @@ export function Media({
     }
   }, [volume]);
 
-  const isVideo = src.endsWith("mp4") || src.endsWith("mov");
+  const isVideo =
+    src.endsWith("mp4") || src.endsWith("mov") || src.endsWith("webm");
   const videoType = () => {
     if (src.endsWith("mov")) return "quicktime";
-    else return "mp4";
+    else return src.substring(src.lastIndexOf(".") + 1).toLowerCase();
   };
 
   const handleMouseEnter = () => {

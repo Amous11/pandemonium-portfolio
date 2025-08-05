@@ -14,6 +14,7 @@ const Vape = lazy(() => import("./pages/Vape.jsx"));
 const SpeedCar = lazy(() => import("./pages/SpeedCar.jsx"));
 const Keyboard = lazy(() => import("./pages/Keyboard.jsx"));
 const Lotion = lazy(() => import("./pages/Lotion.jsx"));
+const Kamaana25 = lazy(() => import("./pages/Kamaana25.jsx"));
 
 function App() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function App() {
               <Route path="/project/Isc" element={<ISC />} />
               <Route path="/project/Sony" element={<Sony />} />
               <Route path="/project/Kamaana" element={<Kamaana />} />
+              <Route path="/project/Kamaana25" element={<Kamaana25 />} />
               <Route path="/project/Neura" element={<Neura />} />
               <Route path="/project/Whiskey" element={<Whiskey />} />
               <Route path="/project/Vape" element={<Vape />} />

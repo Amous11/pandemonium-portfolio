@@ -13,6 +13,8 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289635/P2%20Sony/sony_with_sound_xmc9fi.mp4";
   const kamaanaMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289708/P3%20Kamaana/wearekamaana_full_AGX_jked0p.mp4";
+  const kamaana25MP4 =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1754406895/P12%20Kamaana%202025/teaser_snopg9.mp4";
   const neuraMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1718289745/P4%20Neura/iBotONE_teaser_008_final_tihft8.mp4";
   const carMP4 =
@@ -33,6 +35,8 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289354/P2%20Sony/7_iqpgak.jpg";
   const kamaanaJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1732282031/P3%20Kamaana/selfcare2_niuqye.webp";
+  // const kamaana25JPG =
+  //   "https://res.cloudinary.com/amouscloud/image/upload/v1732282031/P3%20Kamaana/selfcare2_niuqye.webp";
   const neuraJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1718289403/P4%20Neura/vlcsnap-2023-02-21-19h05m30s910_yzqshf.png";
   const carJPG =
@@ -83,6 +87,7 @@ export default function HomePage() {
           },
         ]}
       />
+      <Media src={kamaana25MP4} path="/project/Kamaana25" />
     </Inner>
   );
 }
