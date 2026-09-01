@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 import PropTypes from "prop-types";
 import { HashLink as Link } from "react-router-hash-link";
 
