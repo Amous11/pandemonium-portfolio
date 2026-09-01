@@ -16,6 +16,8 @@ const Keyboard = lazy(() => import("./pages/Keyboard.jsx"));
 const Lotion = lazy(() => import("./pages/Lotion.jsx"));
 const Kamaana25 = lazy(() => import("./pages/Kamaana25.jsx"));
 const Particles = lazy(() => import("./pages/Particles.jsx"));
+const HardDrive = lazy(() => import("./pages/HardDrive.jsx"));
+const IkkariSerum = lazy(() => import("./pages/IkkariSerum.jsx"));
 
 function App() {
   const location = useLocation();
@@ -44,6 +46,8 @@ function App() {
               <Route path="/project/Keyboard" element={<Keyboard />} />
               <Route path="/project/Lotion" element={<Lotion />} />
               <Route path="/project/Particles" element={<Particles />} />
+              <Route path="/project/HardDrive" element={<HardDrive />} />
+              <Route path="/project/IkkariSerum" element={<IkkariSerum />} />
             </Routes>
           </AnimatePresence>
         </LazyMotion>

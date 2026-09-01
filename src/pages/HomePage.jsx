@@ -31,6 +31,8 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/video/upload/v1732282025/P10%20Body%20Lotion/Body_lotion_FInal_for_upload_iqepsj.mp4";
   const particlesMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1787841764/P13%20Particles%20product/video_Final_20k_bitrate_Website_yfvqi2.mp4";
+  const hardDriveMP4 =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1787842953/P14%20hard%20disc/Hard_Drive_v21_srgnnz.mp4";
 
   /* THUMBNAILS */
   const sonyJPG =
@@ -55,16 +57,33 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/image/upload/v1754405771/P12%20Kamaana%202025/Images/1__opgdl8.webp";
   const particlesJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1787841755/P13%20Particles%20product/Sc05_v04_wqrgzj.jpg";
+  const hardDriveJPG =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1787842952/P14%20hard%20disc/Hard_Drive_v19_wnmkba.jpg";
+  const ikkariSerumJPG =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1787846628/P15/stills_jm9kim.jpg";
 
   return (
     <Inner>
       <Media src={demoReel} autoPlay noMargin />
       <MidSection />
       <span id="gallery" />
-      <Media
-        src={particlesMP4}
-        path="/project/Particles"
-        thumbnail={particlesJPG}
+      <MediaGrid
+        vids={[
+          {
+            src: particlesMP4,
+            path: "/project/Particles",
+            thumbnail: particlesJPG,
+          },
+          {
+            src: ikkariSerumJPG,
+            path: "/project/IkkariSerum",
+          },
+          {
+            src: hardDriveMP4,
+            path: "/project/HardDrive",
+            thumbnail: hardDriveJPG,
+          },
+        ]}
       />
       <MediaGrid
         vids={[
