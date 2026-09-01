@@ -1,4 +1,5 @@
 import { Inner } from "../components/animation/Inner";
+import { Media } from "../components/Media";
 import { MediaGrid } from "../components/MediaGrid";
 import { ProductHeader } from "../components/ProductHeader";
 import { ProjectDescription } from "../components/ProjectDescription";
@@ -27,10 +28,9 @@ export default function HardDrive() {
         vids={[
           { src: img1 },
           { src: img4 },
-          { src: img5 },
         ]}
-        columns={3}
       />
+      <Media src={img5} />
       <MediaGrid
         vids={[{ src: img2 }, { src: img3 }]}
       />
