@@ -8,6 +8,7 @@ import vol from "../assets/mute.ico";
 export function Media({
   src,
   thumbnail,
+  images = [],
   autoPlay,
   insideGrid,
   path,
@@ -19,6 +20,11 @@ export function Media({
   const videoRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
   const [muted, setMuted] = useState(muteButton);
+  const isVideo =
+    typeof src === "string" &&
+    ["mp4", "mov", "webm"].some((extension) => src.endsWith(extension));
+  const hasSlideshow = !isVideo && images.length > 1;
+  const [activeImage, setActiveImage] = useState(0);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -26,12 +32,20 @@ export function Media({
     }
   }, [volume]);
 
-  const isVideo =
-    src.endsWith("mp4") || src.endsWith("mov") || src.endsWith("webm");
   const videoType = () => {
     if (src.endsWith("mov")) return "quicktime";
     else return src.substring(src.lastIndexOf(".") + 1).toLowerCase();
   };
+
+  useEffect(() => {
+    if (!hasSlideshow) return undefined;
+
+    const interval = setInterval(() => {
+      setActiveImage((current) => (current + 1) % images.length);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, [hasSlideshow, images.length]);
 
   const handleMouseEnter = () => {
     if (videoRef.current && !autoPlay) {
@@ -84,12 +98,24 @@ export function Media({
           >
             <source src={src} type={`video/${videoType()}`} />
           </video>
+        ) : hasSlideshow ? (
+          <>
+            {images.map((image, index) => (
+              <img
+                key={image}
+                src={image}
+                alt=""
+                className="media-slideshow-image"
+                style={{ opacity: activeImage === index ? 1 : 0 }}
+              />
+            ))}
+          </>
         ) : (
-          <img src={src} />
+          <img src={images[0] || src} alt="" />
         )}
       </LazyLoad>
 
-      {thumbnail && (
+      {thumbnail && !hasSlideshow && (
         <div className="media-overlay m-0 p-0">
           <LazyLoad offset={300}>
             <img src={thumbnail} style={{ opacity: opacity }} />
@@ -111,6 +137,7 @@ export function Media({
 Media.propTypes = {
   src: PropTypes.string,
   thumbnail: PropTypes.string,
+  images: PropTypes.arrayOf(PropTypes.string),
   autoPlay: PropTypes.bool,
   insideGrid: PropTypes.bool,
   path: PropTypes.string,

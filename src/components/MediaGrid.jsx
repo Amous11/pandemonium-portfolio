@@ -11,10 +11,11 @@ export function MediaGrid({ vids, left, aspectRatio, columns }) {
           style={aspectRatio ? undefined : { height: "100vh" }}
         >
           {vids.map((vid) => (
-            <Col md={4} className="p-0" key={vid.src}>
+            <Col md={4} className="p-0" key={vid.src || vid.images?.[0]}>
               <Media
                 src={vid.src}
                 thumbnail={vid.thumbnail}
+                images={vid.images}
                 autoPlay={vid.autoPlay}
                 path={vid.path}
                 insideGrid
@@ -36,6 +37,7 @@ export function MediaGrid({ vids, left, aspectRatio, columns }) {
               <Media
                 src={vids[1].src}
                 thumbnail={vids[1].thumbnail}
+                images={vids[1].images}
                 autoPlay={vids[1].autoPlay}
                 path={vids[1].path}
                 insideGrid
@@ -49,6 +51,7 @@ export function MediaGrid({ vids, left, aspectRatio, columns }) {
                 <Media
                   src={vids[0].src}
                   thumbnail={vids[0].thumbnail}
+                  images={vids[0].images}
                   autoPlay={vids[0].autoPlay}
                   path={vids[0].path}
                   insideGrid
@@ -62,6 +65,7 @@ export function MediaGrid({ vids, left, aspectRatio, columns }) {
                   <Media
                     src={vids[2].src}
                     thumbnail={vids[2].thumbnail}
+                    images={vids[2].images}
                     autoPlay={vids[2].autoPlay}
                     path={vids[2].path}
                     insideGrid
@@ -76,6 +80,7 @@ export function MediaGrid({ vids, left, aspectRatio, columns }) {
               <Media
                 src={vids[1].src}
                 thumbnail={vids[1].thumbnail}
+                images={vids[1].images}
                 autoPlay={vids[1].autoPlay}
                 path={vids[1].path}
                 insideGrid

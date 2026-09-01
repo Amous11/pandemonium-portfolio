@@ -61,6 +61,30 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/image/upload/v1787842952/P14%20hard%20disc/Hard_Drive_v19_wnmkba.jpg";
   const ikkariSerumJPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1787846628/P15/stills_jm9kim.jpg";
+  const iscImages = [
+    iscMP4,
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289427/P1%20ISC/1_Agx_rrxy5s.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289352/P1%20ISC/Shot_06_v4_03_Treatment_syulgw.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289429/P1%20ISC/Shot_02_hicr3h.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289434/P1%20ISC/Shot_13_v12_active_serum_s9d7ms.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289433/P1%20ISC/Shot14_v09_active_serum_vuydji.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289446/P1%20ISC/v1_active_serum_n7tjg6.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289352/P1%20ISC/v1_f5mjdt.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289455/P1%20ISC/v2_active_serum_cw9ubx.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289339/P1%20ISC/v5_myaykr.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289468/P1%20ISC/v21_active_serum_mpgp8w.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289460/P1%20ISC/v22_active_serum_n2ubwc.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1718289357/P1%20ISC/v25_active_serum_drp3ch.jpg",
+  ];
+  const ikkariSerumImages = [
+    ikkariSerumJPG,
+    "https://res.cloudinary.com/amouscloud/image/upload/v1787846630/P15/stills9_ynwewd.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1787846629/P15/stills7_qtzunx.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1787846628/P15/stills2_wzx0nj.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1787846628/P15/stills4_zq9aks.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1787846627/P15/stills5_k8lhik.jpg",
+    "https://res.cloudinary.com/amouscloud/image/upload/v1787846627/P15/stills8_i2chku.jpg",
+  ];
 
   return (
     <Inner>
@@ -93,6 +117,7 @@ export default function HomePage() {
           {
             src: ikkariSerumJPG,
             path: "/project/IkkariSerum",
+            images: ikkariSerumImages,
           },
           {
             src: keyboardMP4,
@@ -119,6 +144,7 @@ export default function HomePage() {
           {
             src: iscMP4,
             path: "/project/ISC",
+            images: iscImages,
           },
         ]}
       />

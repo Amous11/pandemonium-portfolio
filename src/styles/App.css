@@ -50,6 +50,16 @@ a{
   transition: opacity 0.4s ease-in-out;
 }
 
+.media-slideshow-image {
+  transition: opacity 2.5s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media-slideshow-image {
+    transition-duration: 0.01ms;
+  }
+}
+
 .mute-button {
   position: absolute;
   bottom: 0;
