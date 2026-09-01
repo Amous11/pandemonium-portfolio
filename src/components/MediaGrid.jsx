@@ -6,7 +6,10 @@ export function MediaGrid({ vids, left, aspectRatio, columns }) {
   if (columns === 3) {
     return (
       <Container fluid className="overflow-hidden">
-        <Row className="my-1 g-1">
+        <Row
+          className="my-1 g-1"
+          style={aspectRatio ? undefined : { height: "100vh" }}
+        >
           {vids.map((vid) => (
             <Col md={4} className="p-0" key={vid.src}>
               <Media

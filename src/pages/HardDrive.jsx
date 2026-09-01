@@ -30,11 +30,9 @@ export default function HardDrive() {
           { src: img5 },
         ]}
         columns={3}
-        aspectRatio="16 / 9"
       />
       <MediaGrid
         vids={[{ src: img2 }, { src: img3 }]}
-        aspectRatio="16 / 9"
       />
       <br />
     </Inner>
