@@ -29,6 +29,8 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/video/upload/v1732281947/P9%20OP%E2%80%931%20-%20teenage%20engineering%20%21/0001-0120_tc6rlv.mp4";
   const lotionMP4 =
     "https://res.cloudinary.com/amouscloud/video/upload/v1732282025/P10%20Body%20Lotion/Body_lotion_FInal_for_upload_iqepsj.mp4";
+  const particlesMP4 =
+    "https://res.cloudinary.com/amouscloud/video/upload/v1787841764/P13%20Particles%20product/video_Final_20k_bitrate_Website_yfvqi2.mp4";
 
   /* THUMBNAILS */
   const sonyJPG =
@@ -51,12 +53,15 @@ export default function HomePage() {
     "https://res.cloudinary.com/amouscloud/image/upload/v1732281916/P10%20Body%20Lotion/body_lotion_final_montage_0171_xhgopo.webp";
   const kamaana25JPG =
     "https://res.cloudinary.com/amouscloud/image/upload/v1754405771/P12%20Kamaana%202025/Images/1__opgdl8.webp";
+  const particlesJPG =
+    "https://res.cloudinary.com/amouscloud/image/upload/v1787841755/P13%20Particles%20product/Sc05_v04_wqrgzj.jpg";
 
   return (
     <Inner>
       <Media src={demoReel} autoPlay noMargin />
       <MidSection />
       <span id="gallery" />
+      <Media src={particlesMP4} thumbnail={particlesJPG} />
       <MediaGrid
         vids={[
           { src: lotionMP4, path: "/project/Lotion", thumbnail: lotionJPG },
