@@ -74,24 +74,25 @@ export default function HomePage() {
             path: "/project/Particles",
             thumbnail: particlesJPG,
           },
+          
           {
-            src: ikkariSerumJPG,
-            path: "/project/IkkariSerum",
+            src: kamaana25MP4,
+            path: "/project/Kamaana25",
+            thumbnail: kamaana25JPG,
           },
+          { src: lotionMP4, path: "/project/Lotion", thumbnail: lotionJPG }
+        ]}
+      />
+      <MediaGrid
+        vids={[
           {
             src: hardDriveMP4,
             path: "/project/HardDrive",
             thumbnail: hardDriveJPG,
           },
-        ]}
-      />
-      <MediaGrid
-        vids={[
-          { src: lotionMP4, path: "/project/Lotion", thumbnail: lotionJPG },
           {
-            src: kamaana25MP4,
-            path: "/project/Kamaana25",
-            thumbnail: kamaana25JPG,
+            src: ikkariSerumJPG,
+            path: "/project/IkkariSerum",
           },
           {
             src: keyboardMP4,

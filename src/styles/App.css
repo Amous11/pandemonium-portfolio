@@ -5,6 +5,18 @@ body {
   color: white;
 }
 
+.team-page-content {
+  width: calc(100% - 6rem);
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+@media (max-width: 767.98px) {
+  .team-page-content {
+    width: 100%;
+  }
+}
+
 a{
   color: gray;
 }

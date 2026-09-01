@@ -64,6 +64,15 @@ export function TransparentNavbar({ solid }) {
                 Info
               </Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+              <Link
+                to="/team"
+                className="nav-link text-light"
+                style={{ textDecoration: "none" }}
+              >
+                Team
+              </Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -18,6 +18,7 @@ const Kamaana25 = lazy(() => import("./pages/Kamaana25.jsx"));
 const Particles = lazy(() => import("./pages/Particles.jsx"));
 const HardDrive = lazy(() => import("./pages/HardDrive.jsx"));
 const IkkariSerum = lazy(() => import("./pages/IkkariSerum.jsx"));
+const Team = lazy(() => import("./pages/Team.jsx"));
 
 function App() {
   const location = useLocation();
@@ -48,6 +49,7 @@ function App() {
               <Route path="/project/Particles" element={<Particles />} />
               <Route path="/project/HardDrive" element={<HardDrive />} />
               <Route path="/project/IkkariSerum" element={<IkkariSerum />} />
+              <Route path="/team" element={<Team />} />
             </Routes>
           </AnimatePresence>
         </LazyMotion>
