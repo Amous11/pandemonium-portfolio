@@ -1,5 +1,4 @@
 import { Inner } from "../components/animation/Inner";
-import { Media } from "../components/Media";
 import { MediaGrid } from "../components/MediaGrid";
 import { ProductHeader } from "../components/ProductHeader";
 import { ProjectDescription } from "../components/ProjectDescription";
@@ -19,8 +18,6 @@ export default function HardDrive() {
     "https://res.cloudinary.com/amouscloud/image/upload/v1787842951/P14%20hard%20disc/Hard_Drive_v23_tmioyc.jpg";
   const img5 =
     "https://res.cloudinary.com/amouscloud/image/upload/v1787842950/P14%20hard%20disc/Hard_Drive_v28_gbzliz.jpg";
-  const img6 =
-    "https://res.cloudinary.com/amouscloud/image/upload/v1787842950/P14%20hard%20disc/Exploration_hsufa4.png";
 
   return (
     <Inner>
@@ -39,7 +36,6 @@ export default function HardDrive() {
         vids={[{ src: img2 }, { src: img3 }]}
         aspectRatio="16 / 9"
       />
-      <Media src={img6} aspectRatio="2329 / 1194" />
       <br />
     </Inner>
   );
