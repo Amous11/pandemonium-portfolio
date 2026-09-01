@@ -96,4 +96,12 @@ export const projects = [
     name: "Particles",
     description: "Particles product visual.",
   },
+  {
+    name: "HardDrive",
+    description: "Hard drive product visual.",
+  },
+  {
+    name: "IkkariSerum",
+    description: "IkkariSerum product visual.",
+  },
 ];
