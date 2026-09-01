@@ -73,6 +73,10 @@ a{
   }
 }
 
+.media-clickable {
+  cursor: zoom-in;
+}
+
 .media-background video, 
 .media-background img{
   position: absolute;
@@ -111,6 +115,53 @@ a{
   right: 0;
   height: 32px;
   width: 32px;
+}
+
+.media-carousel-dialog {
+  max-width: min(96vw, 1400px);
+}
+
+.media-carousel-content {
+  background: #000;
+  border: 0;
+}
+
+.media-carousel-content .modal-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 1;
+  border: 0;
+}
+
+.media-carousel-content .modal-title {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.media-carousel-content .modal-body {
+  padding: 3rem 4rem 2rem;
+}
+
+.media-carousel-image {
+  display: block;
+  width: 100%;
+  height: min(78vh, 800px);
+  object-fit: contain;
+}
+
+.media-carousel .carousel-control-prev,
+.media-carousel .carousel-control-next {
+  width: 3rem;
+}
+
+@media (max-width: 575.98px) {
+  .media-carousel-content .modal-body {
+    padding: 3rem 1rem 1rem;
+  }
+
+  .media-carousel-image {
+    height: 82vh;
+  }
 }
 
 /* NavBar Animation */

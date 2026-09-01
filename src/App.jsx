@@ -3,6 +3,7 @@ import { AnimatePresence, LazyMotion, domAnimation } from "motion/react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { TransparentNavbar } from "./components/TransparentNavbar.jsx";
 import { PageUp } from "./components/PageUp";
+import { MediaCarousel } from "./components/MediaCarousel";
 import MKBag from "./pages/MKBag.jsx";
 const HomePage = lazy(() => import("./pages/HomePage.jsx"));
 const ISC = lazy(() => import("./pages/ISC.jsx"));
@@ -33,24 +34,26 @@ function App() {
       <Suspense>
         <LazyMotion features={domAnimation}>
           <AnimatePresence mode="wait">
-            <Routes location={location} key={location.pathname}>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/project/Isc" element={<ISC />} />
-              <Route path="/project/Sony" element={<Sony />} />
-              <Route path="/project/Kamaana" element={<Kamaana />} />
-              <Route path="/project/Kamaana25" element={<Kamaana25 />} />
-              <Route path="/project/Neura" element={<Neura />} />
-              <Route path="/project/Whiskey" element={<Whiskey />} />
-              <Route path="/project/Vape" element={<Vape />} />
-              <Route path="/project/SpeedCar" element={<SpeedCar />} />
-              <Route path="/project/MKBag" element={<MKBag />} />
-              <Route path="/project/Keyboard" element={<Keyboard />} />
-              <Route path="/project/Lotion" element={<Lotion />} />
-              <Route path="/project/Particles" element={<Particles />} />
-              <Route path="/project/HardDrive" element={<HardDrive />} />
-              <Route path="/project/IkkariSerum" element={<IkkariSerum />} />
-              <Route path="/team" element={<Team />} />
-            </Routes>
+            <MediaCarousel>
+              <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/project/Isc" element={<ISC />} />
+                <Route path="/project/Sony" element={<Sony />} />
+                <Route path="/project/Kamaana" element={<Kamaana />} />
+                <Route path="/project/Kamaana25" element={<Kamaana25 />} />
+                <Route path="/project/Neura" element={<Neura />} />
+                <Route path="/project/Whiskey" element={<Whiskey />} />
+                <Route path="/project/Vape" element={<Vape />} />
+                <Route path="/project/SpeedCar" element={<SpeedCar />} />
+                <Route path="/project/MKBag" element={<MKBag />} />
+                <Route path="/project/Keyboard" element={<Keyboard />} />
+                <Route path="/project/Lotion" element={<Lotion />} />
+                <Route path="/project/Particles" element={<Particles />} />
+                <Route path="/project/HardDrive" element={<HardDrive />} />
+                <Route path="/project/IkkariSerum" element={<IkkariSerum />} />
+                <Route path="/team" element={<Team />} />
+              </Routes>
+            </MediaCarousel>
           </AnimatePresence>
         </LazyMotion>
       </Suspense>

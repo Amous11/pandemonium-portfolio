@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import vol from "../assets/mute.ico";
 import { VideoLoader } from "./VideoLoader";
+import { useMediaCarousel } from "./media-carousel-context";
 
 export function Media({
   src,
@@ -19,6 +20,8 @@ export function Media({
   aspectRatio,
 }) {
   const videoRef = useRef(null);
+  const gallery = useMediaCarousel();
+  const galleryId = useId();
   const [opacity, setOpacity] = useState(1);
   const [videoLoading, setVideoLoading] = useState(Boolean(autoPlay));
   const [muted, setMuted] = useState(muteButton);
@@ -34,6 +37,7 @@ export function Media({
     }
   }, [volume]);
 
+  const isGalleryItem = Boolean(gallery) && !isVideo;
   const videoType = () => {
     if (src.endsWith("mov")) return "quicktime";
     else return src.substring(src.lastIndexOf(".") + 1).toLowerCase();
@@ -82,11 +86,25 @@ export function Media({
     }
   };
 
+  useEffect(() => {
+    if (!gallery || isVideo) return undefined;
+    return gallery.register(galleryId, { src });
+  }, [gallery, galleryId, isVideo, src]);
+
+  const handleGalleryOpen = () => gallery?.open(galleryId);
+  const handleGalleryKeyDown = (event) => {
+    if (event.target !== event.currentTarget) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      handleGalleryOpen();
+    }
+  };
+
   const content = (
     <div
       className={`media-background d-flex align-items-stretch ${
         insideGrid || noMargin ? "" : "my-1"
-      }`}
+      }${isGalleryItem ? " media-clickable" : ""}`}
       style={{
         width: "100%",
         height: aspectRatio ? "auto" : insideGrid ? "100%" : "100vh",
@@ -94,6 +112,11 @@ export function Media({
       }}
       onMouseEnter={isVideo ? handleMouseEnter : undefined}
       onMouseLeave={isVideo ? handleMouseLeave : undefined}
+      onClick={isGalleryItem ? handleGalleryOpen : undefined}
+      onKeyDown={isGalleryItem ? handleGalleryKeyDown : undefined}
+      role={isGalleryItem ? "button" : undefined}
+      tabIndex={isGalleryItem ? 0 : undefined}
+      aria-label={isGalleryItem ? "Open image gallery" : undefined}
     >
       <LazyLoad offset={300}>
         {isVideo ? (
@@ -131,14 +154,22 @@ export function Media({
       {thumbnail && !hasSlideshow && (
         <div className="media-overlay m-0 p-0">
           <LazyLoad offset={300}>
-            <img src={thumbnail} style={{ opacity: opacity }} />
+            <img src={thumbnail} style={{ opacity: opacity }} alt="" />
           </LazyLoad>
         </div>
       )}
 
       {muted && (
-        <Button variant="link" className="mute-button m-4" onClick={handleMute}>
-          <img src={vol} height={32} width={32} />
+        <Button
+          variant="link"
+          className="mute-button m-4"
+          aria-label="Toggle sound"
+          onClick={(event) => {
+            event.stopPropagation();
+            handleMute();
+          }}
+        >
+          <img src={vol} height={32} width={32} alt="" />
         </Button>
       )}
     </div>
