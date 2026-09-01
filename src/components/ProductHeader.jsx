@@ -19,6 +19,7 @@ export function ProductHeader({ video }) {
             height: "100vh",
           }}
           autoPlay
+          playsInline
           loop
           controls
           ref={videoRef}
