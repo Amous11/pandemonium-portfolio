@@ -28,6 +28,51 @@ a{
   overflow: hidden;
 }
 
+.product-header-video {
+  position: relative;
+}
+
+.video-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.video-loader .video-loader-logo {
+  position: static;
+  width: 64px;
+  height: 64px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  animation: video-loader-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes video-loader-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-loader-logo {
+    animation: none;
+    opacity: 0.8;
+  }
+}
+
 .media-background video, 
 .media-background img{
   position: absolute;

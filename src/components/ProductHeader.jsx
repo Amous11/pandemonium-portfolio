@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { VideoLoader } from "./VideoLoader";
 
 export function ProductHeader({ video }) {
   const videoRef = useRef();
+  const [videoLoading, setVideoLoading] = useState(true);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -12,7 +14,8 @@ export function ProductHeader({ video }) {
 
   return (
     <>
-      <div>
+      <div className="product-header-video">
+        {videoLoading && <VideoLoader />}
         <video
           style={{
             width: "100%",
@@ -23,6 +26,9 @@ export function ProductHeader({ video }) {
           loop
           controls
           ref={videoRef}
+          onCanPlay={() => setVideoLoading(false)}
+          onPlaying={() => setVideoLoading(false)}
+          onError={() => setVideoLoading(false)}
         >
           <source src={video} type="video/mp4" />
           Browser does not support video tag.

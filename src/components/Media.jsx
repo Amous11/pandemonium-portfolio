@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import vol from "../assets/mute.ico";
+import { VideoLoader } from "./VideoLoader";
 
 export function Media({
   src,
@@ -19,6 +20,7 @@ export function Media({
 }) {
   const videoRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
+  const [videoLoading, setVideoLoading] = useState(Boolean(autoPlay));
   const [muted, setMuted] = useState(muteButton);
   const isVideo =
     typeof src === "string" &&
@@ -49,16 +51,21 @@ export function Media({
 
   const handleMouseEnter = () => {
     if (videoRef.current && !autoPlay) {
+      setVideoLoading(true);
       setOpacity(0);
       const promise = videoRef.current.play();
       if (promise !== undefined) {
-        promise.catch((error) => console.log(error));
+        promise.catch((error) => {
+          console.log(error);
+          setVideoLoading(false);
+        });
       }
     }
   };
 
   const handleMouseLeave = () => {
     if (videoRef.current && !autoPlay) {
+      setVideoLoading(false);
       setOpacity(1);
       const promise = videoRef.current.pause();
       if (promise !== undefined) {
@@ -90,14 +97,20 @@ export function Media({
     >
       <LazyLoad offset={300}>
         {isVideo ? (
-          <video
-            ref={videoRef}
-            autoPlay={autoPlay}
-            loop
-            muted={volume ? false : true}
-          >
-            <source src={src} type={`video/${videoType()}`} />
-          </video>
+          <>
+            {videoLoading && <VideoLoader />}
+            <video
+              ref={videoRef}
+              autoPlay={autoPlay}
+              loop
+              muted={volume ? false : true}
+              onCanPlay={() => setVideoLoading(false)}
+              onPlaying={() => setVideoLoading(false)}
+              onError={() => setVideoLoading(false)}
+            >
+              <source src={src} type={`video/${videoType()}`} />
+            </video>
+          </>
         ) : hasSlideshow ? (
           <>
             {images.map((image, index) => (
