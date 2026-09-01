@@ -92,4 +92,8 @@ export const projects = [
     description:
       "A promotional video dedicated to a body lotion, featuring both the body wash and body lotion in an elegantly minimalist setting. The video emphasizes their premium packaging and luxurious appeal through carefully crafted dramatic lighting, creating a sophisticated ambiance that enhances the products' refined aesthetics.",
   },
+  {
+    name: "Particles",
+    description: "Particles product visual.",
+  },
 ];

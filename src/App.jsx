@@ -15,6 +15,7 @@ const SpeedCar = lazy(() => import("./pages/SpeedCar.jsx"));
 const Keyboard = lazy(() => import("./pages/Keyboard.jsx"));
 const Lotion = lazy(() => import("./pages/Lotion.jsx"));
 const Kamaana25 = lazy(() => import("./pages/Kamaana25.jsx"));
+const Particles = lazy(() => import("./pages/Particles.jsx"));
 
 function App() {
   const location = useLocation();
@@ -42,6 +43,7 @@ function App() {
               <Route path="/project/MKBag" element={<MKBag />} />
               <Route path="/project/Keyboard" element={<Keyboard />} />
               <Route path="/project/Lotion" element={<Lotion />} />
+              <Route path="/project/Particles" element={<Particles />} />
             </Routes>
           </AnimatePresence>
         </LazyMotion>

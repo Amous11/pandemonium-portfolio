@@ -61,7 +61,11 @@ export default function HomePage() {
       <Media src={demoReel} autoPlay noMargin />
       <MidSection />
       <span id="gallery" />
-      <Media src={particlesMP4} thumbnail={particlesJPG} />
+      <Media
+        src={particlesMP4}
+        path="/project/Particles"
+        thumbnail={particlesJPG}
+      />
       <MediaGrid
         vids={[
           { src: lotionMP4, path: "/project/Lotion", thumbnail: lotionJPG },

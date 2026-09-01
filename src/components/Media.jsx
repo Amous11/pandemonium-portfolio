@@ -14,6 +14,7 @@ export function Media({
   volume,
   noMargin,
   muteButton,
+  aspectRatio,
 }) {
   const videoRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
@@ -65,7 +66,11 @@ export function Media({
       className={`media-background d-flex align-items-stretch ${
         insideGrid || noMargin ? "" : "my-1"
       }`}
-      style={{ width: "100%", height: insideGrid ? "100%" : "100vh" }}
+      style={{
+        width: "100%",
+        height: aspectRatio ? "auto" : insideGrid ? "100%" : "100vh",
+        aspectRatio,
+      }}
       onMouseEnter={isVideo ? handleMouseEnter : undefined}
       onMouseLeave={isVideo ? handleMouseLeave : undefined}
     >
@@ -112,4 +117,5 @@ Media.propTypes = {
   volume: PropTypes.number,
   noMargin: PropTypes.bool,
   muteButton: PropTypes.bool,
+  aspectRatio: PropTypes.string,
 };
