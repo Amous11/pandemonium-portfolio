@@ -4,16 +4,16 @@ import { TeamMember } from "../components/TeamMember";
 const members = [
   {
     imageSrc:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=85",
+      "https://res.cloudinary.com/amouscloud/image/upload/v1788345424/Photos%20Bio/New_Project_1_ibfwgi.jpg",
     fullName: "Nizar Amous",
-    role: "Creative Director",
+    role: "3D Artist",
     description:
-      "Co-founder and creative director, shaping the visual language behind Pandemonium's product films and motion work.",
+      "3D animator specializing in motion graphics, lighting, and procedural setups, with a passion for 3D that dates back to his teenage years. Part of a two-person studio delivering polished 3D animation for brand, commercial, and event work. A lifelong lover of art in all its forms, film, traditional media, installation art, which shapes his visual style. Also creates abstract drawings and interactive installations of his own.",
     direction: "right",
   },
   {
     imageSrc:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=85",
+      "https://res.cloudinary.com/amouscloud/image/upload/v1788345425/Photos%20Bio/New_Project_2_ckc1ia.jpg",
     fullName: "Marwen Zribi",
     role: "3D Artist",
     description:

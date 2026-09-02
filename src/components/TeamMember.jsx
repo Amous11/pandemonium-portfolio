@@ -25,7 +25,7 @@ export function TeamMember({
           display: "block",
           width: "20rem",
           maxWidth: "100%",
-          aspectRatio: "10 / 16",
+          aspectRatio: "4 / 3",
           height: "auto",
           objectFit: "cover",
         }}
@@ -43,7 +43,7 @@ export function TeamMember({
       <div
         style={{
           width: "100%",
-          maxWidth: "400px",
+          maxWidth: "600px",
           alignSelf: imageOnLeft ? "flex-start" : "flex-end",
         }}
       >
