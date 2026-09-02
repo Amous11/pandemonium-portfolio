@@ -1,6 +1,7 @@
 import { Inner } from "../components/animation/Inner";
 import { ProjectDescription } from "../components/ProjectDescription";
 import { TeamMember } from "../components/TeamMember";
+import logo from "../assets/logo.svg";
 
 const company = {
   title: "Pandemonium Visuals",
@@ -25,6 +26,9 @@ const members = [
 export default function Team() {
   return (
     <Inner>
+      <header className="team-page-header">
+        <img src={logo} alt="Pandemonium Visuals" />
+      </header>
       <div className="team-page-content">
         <ProjectDescription title={company.title} desc={company.description} />
         <div className="d-flex flex-wrap justify-content-center gap-5">

@@ -11,7 +11,22 @@ body {
   margin-inline: auto;
 }
 
+.team-page-header {
+  display: grid;
+  place-items: center;
+  padding: 6rem 1rem 3rem;
+}
+
+.team-page-header img {
+  width: min(70vw, 420px);
+  height: auto;
+}
+
 @media (max-width: 767.98px) {
+  .team-page-header {
+    padding-top: 5rem;
+  }
+
   .team-page-content {
     width: 100%;
   }
