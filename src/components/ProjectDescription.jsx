@@ -13,7 +13,7 @@ export function ProjectDescription({ title, desc }) {
             <p>-</p>
             <Row>
               <Col xs={12}>
-                <h1 className="text-break" style={{ fontSize: "2rem" }}>
+                <h1 style={{ fontSize: "1.75rem", overflowWrap: "normal" }}>
                   <b>{title}</b>
                 </h1>
               </Col>

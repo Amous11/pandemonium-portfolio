@@ -9,10 +9,9 @@ export function TeamMember({ imageSrc, fullName, role }) {
         loading="lazy"
         style={{
           display: "block",
-          width: "20rem",
-          maxWidth: "100%",
-          aspectRatio: "4 / 3",
-          height: "auto",
+          width: "auto",
+          aspectRatio: "3/4",
+          height: "60vh",
           objectFit: "cover",
         }}
       />
