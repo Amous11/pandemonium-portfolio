@@ -11,7 +11,8 @@ export function TeamMember({ imageSrc, fullName, role }) {
           display: "block",
           width: "auto",
           aspectRatio: "3/4",
-          height: "60vh",
+          height: "auto",
+          maxHeight: "500px",
           objectFit: "cover",
         }}
       />
